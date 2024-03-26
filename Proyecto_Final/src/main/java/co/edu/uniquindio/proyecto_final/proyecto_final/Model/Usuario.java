@@ -3,13 +3,13 @@ package co.edu.uniquindio.proyecto_final.proyecto_final.Model;
 import java.util.ArrayList;
 
 public class Usuario extends Persona{
-    ArrayList<Evento> evento;
+    ArrayList<Reserva> reserva;
 
-    public ArrayList<Evento> getEvento() {
-        return evento;
+    public ArrayList<Reserva> getReserva() {
+        return reserva;
     }
 
-    public void setEvento(ArrayList<Evento> evento) {
-        this.evento = evento;
+    public void setReserva(ArrayList<Reserva> reserva) {
+        this.reserva = reserva;
     }
 }
