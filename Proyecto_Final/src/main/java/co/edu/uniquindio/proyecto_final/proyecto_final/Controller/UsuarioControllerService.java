@@ -13,7 +13,7 @@ public class UsuarioControllerService implements IUsuarioControllerService {
     }
 
     @Override
-    public boolean agregarUsuario(EmpleadoDto empleado) {
+    public boolean agregarUsuario(UsuarioDto usuario) {
         return false;
     }
 
@@ -23,7 +23,7 @@ public class UsuarioControllerService implements IUsuarioControllerService {
     }
 
     @Override
-    public boolean actualizarUsuario(int id, EmpleadoDto empleado) {
+    public boolean actualizarUsuario(int id, UsuarioDto usuario) {
         return false;
     }
 }
