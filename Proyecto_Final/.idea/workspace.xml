@@ -17,6 +17,7 @@
       <list>
         <option value="Record" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
