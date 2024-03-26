@@ -1,0 +1,42 @@
+Index: src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Usuario.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Usuario.java b/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Usuario.java
+new file mode 100644
+--- /dev/null	(date 1711486193815)
++++ b/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Usuario.java	(date 1711486193815)
+@@ -0,0 +1,4 @@
++package co.edu.uniquindio.proyecto_final.proyecto_final.Model;
++
++public class Usuario {
++}
+Index: src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Empleado.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Empleado.java b/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Empleado.java
+new file mode 100644
+--- /dev/null	(date 1711486193810)
++++ b/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Empleado.java	(date 1711486193810)
+@@ -0,0 +1,4 @@
++package co.edu.uniquindio.proyecto_final.proyecto_final.Model;
++
++public class Empleado {
++}
+Index: src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Persona.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Persona.java b/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Persona.java
+new file mode 100644
+--- /dev/null	(date 1711486167536)
++++ b/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Model/Persona.java	(date 1711486167536)
+@@ -0,0 +1,4 @@
++package co.edu.uniquindio.proyecto_final.proyecto_final.Model;
++
++public class Persona {
++}
