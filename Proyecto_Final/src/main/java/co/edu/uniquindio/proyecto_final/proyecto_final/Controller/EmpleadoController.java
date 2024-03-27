@@ -5,7 +5,7 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EmpleadoDto;
 
 import java.util.List;
 
-public class EmpleadoControllerService implements IEmpleadoControllerService {
+public class EmpleadoController implements IEmpleadoControllerService {
     @Override
     public List<EmpleadoDto> obtenerEmpleados() {
         return null;
