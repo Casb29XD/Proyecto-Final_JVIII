@@ -38,7 +38,7 @@ public class ModelFactoryController implements IModelFactoryService {
 
     @Override
     public List<UsuarioDto> obtenerUsuarios() {
-        return null;
+        return mapper.getUsuarioDto(sgre.getUsuarios());
     }
 
     @Override
