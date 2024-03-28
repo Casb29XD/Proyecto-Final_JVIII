@@ -15,7 +15,7 @@ public interface SgreMapper {
 
     @Named("usuarioToUsuarioDto")
     UsuarioDto usuarioToUsuarioDto(Usuario usuario);
-    Usuario usuarioFtoToUsuario(UsuarioDto usuarioDto);
+    Usuario usuarioDtoFtoToUsuario(UsuarioDto usuarioDto);
     @IterableMapping(qualifiedByName = "usuarioToUsuarioDto")
     List<UsuarioDto> getUsuarioDto(List<Usuario> Usuarios);
 

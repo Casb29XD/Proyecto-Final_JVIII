@@ -5,6 +5,6 @@ import java.util.List;
 public record EmpleadoDto(
     int id,
     String nombre,
-    String Correo,
+    String correo,
     List<EventoDto> eventoDtoList
 ) {}
