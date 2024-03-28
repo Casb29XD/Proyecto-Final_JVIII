@@ -1,12 +1,11 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.Controller;
 
 import co.edu.uniquindio.proyecto_final.proyecto_final.Controller.Service.IUsuarioControllerService;
-import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EmpleadoDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.UsuarioDto;
 
 import java.util.List;
 
-public class UsuarioControllerService implements IUsuarioControllerService {
+public class UsuarioController implements IUsuarioControllerService {
     @Override
     public List<UsuarioDto> obtenerUsuarios() {
         return null;

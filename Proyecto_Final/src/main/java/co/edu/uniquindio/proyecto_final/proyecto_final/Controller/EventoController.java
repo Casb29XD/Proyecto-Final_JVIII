@@ -5,7 +5,7 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EventoDto;
 
 import java.util.List;
 
-public class EventoControllerService implements IEventoControllerService {
+public class EventoController implements IEventoControllerService {
     @Override
     public List<EventoDto> obtenerEvento() {
         return null;

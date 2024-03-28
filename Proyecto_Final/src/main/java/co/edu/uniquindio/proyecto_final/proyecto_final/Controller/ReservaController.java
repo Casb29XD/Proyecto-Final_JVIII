@@ -5,7 +5,7 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.ReservaDto;
 
 import java.util.List;
 
-public class ReservaControllerService implements IReservaControllerService {
+public class ReservaController implements IReservaControllerService {
     @Override
     public List<ReservaDto> obtenerReserva() {
         return null;
