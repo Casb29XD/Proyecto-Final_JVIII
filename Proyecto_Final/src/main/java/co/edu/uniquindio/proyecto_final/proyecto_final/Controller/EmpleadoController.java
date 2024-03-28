@@ -8,21 +8,25 @@ import java.util.List;
 public class EmpleadoController implements IEmpleadoControllerService {
     @Override
     public List<EmpleadoDto> obtenerEmpleados() {
+
         return null;
     }
 
     @Override
     public boolean agregarEmpleado(EmpleadoDto empleado) {
+
         return false;
     }
 
     @Override
     public boolean eliminarEmpleado(int id) {
+
         return false;
     }
 
     @Override
     public boolean actualizarEmpleado(int id, EmpleadoDto empleado) {
+
         return false;
     }
 }
