@@ -47,7 +47,7 @@ public class ModelFactoryController implements IModelFactoryService {
     public boolean agregarUsuario(UsuarioDto usuarioDto) {
         try {
             if (!sgre.verificarUsuario(usuarioDto.id())){
-                Usuario usuario= mapper.usuarioFtoToUsuario(usuarioDto);
+                Usuario usuario= mapper.usuarioDtoFtoToUsuario(usuarioDto);
                 getSgre().agregarUsuario(usuario);
             }
             return true;
@@ -58,7 +58,7 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     @Override
-    public boolean eliminarUsuario(int id) {
+    public boolean eliminarUsuario(String id) {
         boolean flagExiste = false;
         try {
             flagExiste = getSgre().eliminarUsuario(id);
@@ -69,7 +69,7 @@ public class ModelFactoryController implements IModelFactoryService {
         return flagExiste;
     }
     @Override
-    public boolean actualizarUsuario(int id, UsuarioDto usuarioDto) {
+    public boolean actualizarUsuario(String id, UsuarioDto usuarioDto) {
         try {
             Usuario usuario = mapper.usuarioDtoFtoToUsuario(usuarioDto);
             getSgre().actualizarUsuario(id,usuario);

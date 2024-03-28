@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Evento {
-    int id;
+    String id;
     String nombre;
     String descripcion;
     Date fecha;
@@ -12,11 +12,11 @@ public class Evento {
     Empleado empleado;
     ArrayList<Reserva> reserva;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

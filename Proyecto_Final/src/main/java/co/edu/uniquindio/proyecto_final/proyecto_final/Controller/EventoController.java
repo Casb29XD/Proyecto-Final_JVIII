@@ -17,12 +17,12 @@ public class EventoController implements IEventoControllerService {
     }
 
     @Override
-    public boolean eliminarUsuario(int id) {
+    public boolean eliminarUsuario(String id) {
         return false;
     }
 
     @Override
-    public boolean actualizarUsuario(int id, EventoDto evento) {
+    public boolean actualizarUsuario(String id, EventoDto evento) {
         return false;
     }
 }

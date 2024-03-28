@@ -40,13 +40,13 @@ public class UsuarioViewController {
     private  void actualizarUsuario(){}
 
     private UsuarioDto construirUsuarioDto() {
-        return new UsuarioDto(123,"martin","",new ArrayList<>());
+        return new UsuarioDto("123","martin","",new ArrayList<>());
     }
     private void limpiarCamposEmpleado() {
     }
     private boolean datosValidos(UsuarioDto usuarioDto){
         String mensaje="";
-        if (usuarioDto.id() == 0){
+        if (usuarioDto.id() ==null || usuarioDto.id().equals("")){
             mensaje += "El id es invalido \n" ;
         }if (usuarioDto.nombre()==null || usuarioDto.nombre().equals("")){
             mensaje += "El nombre es invalido \n" ;

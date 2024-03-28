@@ -6,7 +6,7 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Usuario;
 import java.util.Date;
 
 public record ReservaDto(
-    int id,
+        String id,
     Usuario usuario,
     Evento evento,
     Date fechaSolicitud,

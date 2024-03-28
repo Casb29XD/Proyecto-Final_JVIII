@@ -17,12 +17,12 @@ public class EmpleadoController implements IEmpleadoControllerService {
     }
 
     @Override
-    public boolean eliminarEmpleado(int id) {
+    public boolean eliminarEmpleado(String id) {
         return false;
     }
 
     @Override
-    public boolean actualizarEmpleado(int id, EmpleadoDto empleado) {
+    public boolean actualizarEmpleado(String id, EmpleadoDto empleado) {
         return false;
     }
 }

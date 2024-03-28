@@ -17,12 +17,12 @@ public class UsuarioController implements IUsuarioControllerService {
     }
 
     @Override
-    public boolean eliminarUsuario(int id) {
+    public boolean eliminarUsuario(String id) {
         return false;
     }
 
     @Override
-    public boolean actualizarUsuario(int id, UsuarioDto usuario) {
+    public boolean actualizarUsuario(String id, UsuarioDto usuario) {
         return false;
     }
 }

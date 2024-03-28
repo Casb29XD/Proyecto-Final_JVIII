@@ -7,6 +7,6 @@ import java.util.List;
 public interface IUsuarioControllerService {
     List<UsuarioDto> obtenerUsuarios();
     boolean agregarUsuario(UsuarioDto usuario);
-    boolean eliminarUsuario(int id);
-    boolean actualizarUsuario(int id, UsuarioDto usuario);
+    boolean eliminarUsuario(String id);
+    boolean actualizarUsuario(String id, UsuarioDto usuario);
 }

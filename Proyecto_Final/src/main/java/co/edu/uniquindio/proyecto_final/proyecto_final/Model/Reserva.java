@@ -3,17 +3,17 @@ package co.edu.uniquindio.proyecto_final.proyecto_final.Model;
 import java.util.Date;
 
 public class Reserva {
-    int id;
+    String id;
     Usuario usuario;
     Evento evento;
     Date fechaSolicitud;
     String estado;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
