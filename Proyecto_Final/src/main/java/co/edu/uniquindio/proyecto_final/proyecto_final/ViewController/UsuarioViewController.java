@@ -19,7 +19,7 @@ public class UsuarioViewController {
     private void obtenerUsuarios() {
         listaUsuarioDtos.addAll(usuarioControllerService.obtenerUsuarios());
     }
-    private void crearEmpleado() {
+    private void creaUsuario() {
         //1. Capturar los datos
         UsuarioDto usuarioDto= construirUsuarioDto();
         //2. Validar la información
@@ -36,12 +36,13 @@ public class UsuarioViewController {
         }
 
     }
-
-    private void limpiarCamposEmpleado() {
-    }
+    private  void eliminarUsuario(){}
+    private  void actualizarUsuario(){}
 
     private UsuarioDto construirUsuarioDto() {
         return new UsuarioDto(123,"martin","",new ArrayList<>());
+    }
+    private void limpiarCamposEmpleado() {
     }
     private boolean datosValidos(UsuarioDto usuarioDto){
         String mensaje="";
