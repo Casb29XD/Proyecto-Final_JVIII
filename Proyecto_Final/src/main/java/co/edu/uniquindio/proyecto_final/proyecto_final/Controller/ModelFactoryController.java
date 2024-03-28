@@ -48,7 +48,7 @@ public class ModelFactoryController implements IModelFactoryService {
         try {
             if (!sgre.verificarUsuario(usuarioDto.id())){
                 Usuario usuario= mapper.usuarioFtoToUsuario(usuarioDto);
-
+                getSgre().agregarUsuario(usuario);
             }
             return true;
         }catch (UsuarioException e){
@@ -59,11 +59,24 @@ public class ModelFactoryController implements IModelFactoryService {
 
     @Override
     public boolean eliminarUsuario(int id) {
-        return false;
+        boolean flagExiste = false;
+        try {
+            flagExiste = getSgre().eliminarUsuario(id);
+        } catch (UsuarioException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return flagExiste;
     }
-
     @Override
-    public boolean actualizarUsuario(int id, UsuarioDto usuario) {
-        return false;
+    public boolean actualizarUsuario(int id, UsuarioDto usuarioDto) {
+        try {
+            Usuario usuario = mapper.usuarioDtoFtoToUsuario(usuarioDto);
+            getSgre().actualizarUsuario(id,usuario);
+            return true;
+        } catch (UsuarioException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
