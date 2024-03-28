@@ -5,8 +5,7 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Empleado;
 import java.util.Date;
 import java.util.List;
 
-public record EventoDto(
-    int id,
+public record EventoDto(String id,
     String nombre,
     String descripcion,
     Date fecha,

@@ -7,10 +7,10 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Usuario;
 import java.util.ArrayList;
 
 public interface IUsuarioService {
-    public Usuario crearUsuario(int id, String nombre, String correo, ArrayList<Reserva> reserva)throws UsuarioException;
-    public boolean eliminarUsuario(int id)throws UsuarioException;
-    public boolean actualizarUsuario(int id, Usuario usuario)throws UsuarioException;
-    public boolean verificarUsuario(int id)throws UsuarioException;
-    public Usuario obtenerUsuario(int id)throws UsuarioException;
+    public Usuario crearUsuario(String id, String nombre, String correo, ArrayList<Reserva> reserva)throws UsuarioException;
+    public boolean eliminarUsuario(String id)throws UsuarioException;
+    public boolean actualizarUsuario(String id, Usuario usuario)throws UsuarioException;
+    public boolean verificarUsuario(String id)throws UsuarioException;
+    public Usuario obtenerUsuario(String id)throws UsuarioException;
     public ArrayList<Usuario> obtenerUsuarios();
 }

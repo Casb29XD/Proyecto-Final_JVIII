@@ -17,12 +17,12 @@ public class ReservaController implements IReservaControllerService {
     }
 
     @Override
-    public boolean eliminarUsuario(int id) {
+    public boolean eliminarUsuario(String id) {
         return false;
     }
 
     @Override
-    public boolean actualizarUsuario(int id, ReservaDto reserva) {
+    public boolean actualizarUsuario(String id, ReservaDto reserva) {
         return false;
     }
 }

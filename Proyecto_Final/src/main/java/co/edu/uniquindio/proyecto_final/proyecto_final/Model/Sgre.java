@@ -45,7 +45,7 @@ public class Sgre implements IUsuarioService {
     }
 //crud de usuarios
     @Override
-    public Usuario crearUsuario(int id, String nombre, String correo, ArrayList<Reserva> reserva) throws UsuarioException {
+    public Usuario crearUsuario(String id, String nombre, String correo, ArrayList<Reserva> reserva) throws UsuarioException {
         Usuario nuevoUsuario= null;
         boolean usuarioExistente= verificarUsuario(id);
         if (usuarioExistente){
@@ -64,7 +64,7 @@ public class Sgre implements IUsuarioService {
         getUsuarios().add(usuario);
     }
     @Override
-    public boolean eliminarUsuario(int id) throws UsuarioException {
+    public boolean eliminarUsuario(String id) throws UsuarioException {
          Usuario usuario= null;
          boolean existe=false;
          usuario= obtenerUsuario(id);
@@ -78,7 +78,7 @@ public class Sgre implements IUsuarioService {
     }
 
     @Override
-    public boolean actualizarUsuario(int id, Usuario usuario) throws UsuarioException {
+    public boolean actualizarUsuario(String id, Usuario usuario) throws UsuarioException {
         Usuario usuarioactual = obtenerUsuario(id);
         if (usuarioactual == null){
             throw new UsuarioException("Ese usuario no existe");
@@ -91,7 +91,7 @@ public class Sgre implements IUsuarioService {
     }
 
     @Override
-    public boolean verificarUsuario(int id) throws UsuarioException {
+    public boolean verificarUsuario(String id) throws UsuarioException {
         if (usuarioExiste(id)){
             throw new UsuarioException("El usuario con id: " +id+" ya se encuentra registrado");
         }else {
@@ -99,10 +99,10 @@ public class Sgre implements IUsuarioService {
         }
     }
 
-    private boolean usuarioExiste(int id) {
+    private boolean usuarioExiste(String id) {
         boolean usuarioEncontrado=false;
         for (Usuario usuario: getUsuarios()){
-            if (usuario.getId()== id){
+            if (usuario.getId().equals(id)){
                 usuarioEncontrado = true;
                 break;
             }
@@ -111,10 +111,10 @@ public class Sgre implements IUsuarioService {
     }
 
     @Override
-    public Usuario obtenerUsuario(int id) throws UsuarioException {
+    public Usuario obtenerUsuario(String id) throws UsuarioException {
         Usuario usuarioEncontrado= null;
         for (Usuario usuario: getUsuarios()){
-            if (usuario.getId()== id){
+            if (usuario.getId().equals(id)){
                 usuarioEncontrado = usuario;
                 break;
             }
