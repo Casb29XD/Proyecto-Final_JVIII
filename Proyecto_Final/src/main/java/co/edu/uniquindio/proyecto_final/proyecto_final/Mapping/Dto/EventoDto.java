@@ -5,12 +5,12 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Empleado;
 import java.util.Date;
 import java.util.List;
 
-public record EventoDto() {
-    static int id;
-    static String nombre;
-    static String descripcion;
-    static Date fecha;
-    static int capacidadMaxima;
-    static Empleado empleado;
-    static List<ReservaDto> reservaDtoList;
-}
+public record EventoDto(
+    int id,
+    String nombre,
+    String descripcion,
+    Date fecha,
+    int capacidadMaxima,
+    Empleado empleado,
+    List<ReservaDto> reservaDtoList
+) {}

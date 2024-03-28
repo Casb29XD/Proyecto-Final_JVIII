@@ -1,9 +1,11 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.Controller;
 
 import co.edu.uniquindio.proyecto_final.proyecto_final.Controller.Service.IModelFactoryService;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Exceptions.UsuarioException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.UsuarioDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Mappers.SgreMapper;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Sgre;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Usuario;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Utils.SgreUtils;
 
 import java.util.List;
@@ -42,8 +44,17 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     @Override
-    public boolean agregarUsuario(UsuarioDto usuario) {
-        return false;
+    public boolean agregarUsuario(UsuarioDto usuarioDto) {
+        try {
+            if (!sgre.verificarUsuario(usuarioDto.id())){
+                Usuario usuario= mapper.usuarioFtoToUsuario(usuarioDto);
+
+            }
+            return true;
+        }catch (UsuarioException e){
+            e.getMessage();
+            return false;
+        }
     }
 
     @Override
