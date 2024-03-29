@@ -2,7 +2,6 @@ package co.edu.uniquindio.proyecto_final.proyecto_final.ViewController;
 
 import co.edu.uniquindio.proyecto_final.proyecto_final.Controller.EmpleadoController;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EmpleadoDto;
-import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EventoDto;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,9 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.net.URL;
 import java.util.Optional;
-import java.util.ResourceBundle;
 
 public class EmpleadoViewController {
     EmpleadoController empleadoControllerService;
@@ -20,16 +17,13 @@ public class EmpleadoViewController {
     EmpleadoDto empleadoSeleccionado;
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
     private TextField txtNombre;
 
     @FXML
-    private TextField txtCedula;
+    private TextField txtCorreo;
 
     @FXML
-    private TextField txtCorreo;
+    private TableColumn<EmpleadoDto, String> tcNombre;
 
     @FXML
     private Button btnActualizar;
@@ -38,16 +32,19 @@ public class EmpleadoViewController {
     private Button btnNuevo;
 
     @FXML
-    private Button btnAgregar;
-
-    @FXML
     private Button btnEliminar;
 
     @FXML
     private TableView<EmpleadoDto> tableEmpleados;
 
     @FXML
-    private TableColumn<EmpleadoDto, String> tcNombre;
+    private Button btnAgregar;
+
+    @FXML
+    private TableColumn<?, ?> tcEvento;
+
+    @FXML
+    private TextField txtCedula;
 
     @FXML
     private TableColumn<EmpleadoDto, String> tcCedula;
@@ -70,9 +67,9 @@ public class EmpleadoViewController {
     }
 
     private void initDataBinding() {
-        tcNombre.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().nombre()));
-        tcCedula.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().cedula()));
-        tcCorreo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().correo()));
+            tcNombre.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().nombre()));
+            tcCedula.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().cedula()));
+            tcCorreo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().correo()));
     }
 
     private void obtenerEmpleados() {

@@ -11,23 +11,23 @@
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="133.0" prefWidth="736.0" style="-fx-background-color: #37474D;">
                     <children>
-                        <TextField fx:id="txtNombreEmpleado" layoutX="82.0" layoutY="23.0" prefHeight="25.0" prefWidth="462.0" promptText="Nombre" />
-                        <TextField fx:id="txtCedulaEmpleado" layoutX="83.0" layoutY="74.0" prefHeight="25.0" prefWidth="462.0" promptText="Cédula" />
-                        <TextField fx:id="txtCorreoEmpleado" layoutX="83.0" layoutY="128.0" prefHeight="27.0" prefWidth="462.0" promptText="Correo" />
-                        <Button fx:id="btnActualizarEmpleado" layoutX="596.0" layoutY="128.0" mnemonicParsing="false" onAction="#actualizarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: D8851C;" text="Actualizar" textFill="WHITE">
+                        <TextField fx:id="txtNombre" layoutX="82.0" layoutY="23.0" prefHeight="25.0" prefWidth="462.0" promptText="Nombre" />
+                        <TextField fx:id="txtCedula" layoutX="83.0" layoutY="74.0" prefHeight="25.0" prefWidth="462.0" promptText="Cédula" />
+                        <TextField fx:id="txtCorreo" layoutX="83.0" layoutY="128.0" prefHeight="27.0" prefWidth="462.0" promptText="Correo" />
+                        <Button fx:id="btnActualizar" layoutX="596.0" layoutY="128.0" mnemonicParsing="false" onAction="#actualizarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: D8851C;" text="Actualizar" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
-                        <Button fx:id="btnNuevoEmpleado" layoutX="596.0" layoutY="22.0" mnemonicParsing="false" onAction="#nuevoEmpleadoAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: D8851C;" text="Nuevo" textFill="WHITE">
+                        <Button fx:id="btnNuevo" layoutX="596.0" layoutY="22.0" mnemonicParsing="false" onAction="#nuevoEmpleadoAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: D8851C;" text="Nuevo" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
-                        <Button fx:id="btnAgregarEmpleado" layoutX="596.0" layoutY="73.0" mnemonicParsing="false" onAction="#agregarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: D8851C;" text="Agregar" textFill="WHITE">
+                        <Button fx:id="btnAgregar" layoutX="596.0" layoutY="73.0" mnemonicParsing="false" onAction="#agregarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: D8851C;" text="Agregar" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
                         <Separator layoutX="13.0" layoutY="217.0" prefHeight="2.0" prefWidth="711.0" />
-                        <Button fx:id="btnEliminarEmpleado" layoutX="316.0" layoutY="241.0" mnemonicParsing="false" onAction="#eliminarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: D8851C;" text="Eliminar" textFill="WHITE">
+                        <Button fx:id="btnEliminar" layoutX="316.0" layoutY="241.0" mnemonicParsing="false" onAction="#eliminarEmpleadoAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: D8851C;" text="Eliminar" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
@@ -36,10 +36,10 @@
                     <children>
                         <TableView fx:id="tableEmpleados" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="711.0" style="-fx-background-color: A49E95;">
                             <columns>
-                                <TableColumn fx:id="tcNombreEmpleado" prefWidth="177.0" text="Nombre" />
-                                <TableColumn fx:id="tcCedulaEmpleado" prefWidth="148.0" text="Cédula" />
-                                <TableColumn fx:id="tcCorreoEmpleado" prefWidth="216.0" text="Correo" />
-                        <TableColumn fx:id="tcEventoEmpleado" prefWidth="216.0" text="Evento" />
+                                <TableColumn fx:id="tcNombre" prefWidth="177.0" text="Nombre" />
+                                <TableColumn fx:id="tcCedula" prefWidth="148.0" text="Cédula" />
+                                <TableColumn fx:id="tcCorreo" prefWidth="216.0" text="Correo" />
+                        <TableColumn fx:id="tcEvento" prefWidth="216.0" text="Evento" />
                             </columns>
                         </TableView>
                     </children></AnchorPane>
