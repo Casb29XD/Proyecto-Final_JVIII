@@ -47,7 +47,7 @@ public class ModelFactoryController implements IModelFactoryService {
     public boolean agregarUsuario(UsuarioDto usuarioDto) {
         try {
             if (!sgre.verificarUsuario(usuarioDto.id())){
-                Usuario usuario= mapper.usuarioDtoFtoToUsuario(usuarioDto);
+                Usuario usuario= mapper.usuarioDtotoToUsuario(usuarioDto);
                 getSgre().agregarUsuario(usuario);
             }
             return true;
@@ -71,7 +71,7 @@ public class ModelFactoryController implements IModelFactoryService {
     @Override
     public boolean actualizarUsuario(String id, UsuarioDto usuarioDto) {
         try {
-            Usuario usuario = mapper.usuarioDtoFtoToUsuario(usuarioDto);
+            Usuario usuario = mapper.usuarioDtotoToUsuario(usuarioDto);
             getSgre().actualizarUsuario(id,usuario);
             return true;
         } catch (UsuarioException e) {
