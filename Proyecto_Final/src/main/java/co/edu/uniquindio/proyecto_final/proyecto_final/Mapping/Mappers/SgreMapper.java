@@ -1,6 +1,7 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Mappers;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EmpleadoDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.UsuarioDto;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Empleado;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Usuario;
 import org.mapstruct.IterableMapping;
 import org.mapstruct.Mapper;
@@ -18,5 +19,10 @@ public interface SgreMapper {
     Usuario usuarioDtotoToUsuario(UsuarioDto usuarioDto);
     @IterableMapping(qualifiedByName = "usuarioToUsuarioDto")
     List<UsuarioDto> getUsuarioDto(List<Usuario> Usuarios);
-
+    //mappaer de empleados
+    @Named("empleadoToEmpleadoDto")
+    EmpleadoDto empleadoToEmpleadoDto(Empleado empleado);
+    Empleado empleadoDtoToEmpleado(EmpleadoDto empleadoDto);
+    @IterableMapping(qualifiedByName = "empleadoToEmpleadoDto")
+    List<EmpleadoDto> geEmpleadoDtos(List<Empleado> empleados);
 }
