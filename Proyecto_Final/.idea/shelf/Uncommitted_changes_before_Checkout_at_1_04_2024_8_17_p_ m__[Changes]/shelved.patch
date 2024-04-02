@@ -1,0 +1,112 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"243c359d-8a84-4c6d-91b0-d574e53f3f21\" name=\"Changes\" comment=\"cambios\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/UsuarioViewController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/UsuarioViewController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Record\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--follow-tags\" />\r\n        <option name=\"title\" value=\"Current Branch\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$/..\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"Casb29XD\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"6a9847e5-6ca4-45b0-8399-7b62af6ade4a\" />\r\n        <option name=\"url\" value=\"https://github.com/Casb29XD/Proyecto-Final_JVIII.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2e6ok7n8H0hfTlB0Ix6R37qz6gq\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;construcor&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/finia/OneDrive/Escritorio/Java-III-Diurna/banco_javafx&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"243c359d-8a84-4c6d-91b0-d574e53f3f21\" name=\"Changes\" comment=\"\" />\r\n      <created>1711234530099</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1711234530099</updated>\r\n      <workItem from=\"1711234531125\" duration=\"56000\" />\r\n      <workItem from=\"1711234628777\" duration=\"43000\" />\r\n      <workItem from=\"1711234942066\" duration=\"82000\" />\r\n      <workItem from=\"1711235103673\" duration=\"25000\" />\r\n      <workItem from=\"1711303052114\" duration=\"683000\" />\r\n      <workItem from=\"1711470837535\" duration=\"91000\" />\r\n      <workItem from=\"1711471599157\" duration=\"1261000\" />\r\n      <workItem from=\"1711472867233\" duration=\"66000\" />\r\n      <workItem from=\"1711555246988\" duration=\"5029000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"map\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711486022888</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711486022888</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"map\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711486036526</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711486036526</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"map\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711486197432</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711486197432</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"lol\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711486551200</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711486551200</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"con\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711486751778</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711486751778</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"model\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711571783020</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711571783020</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"model\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711571929522</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711571929522</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"model\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711572047204</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711572047204</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"cambios\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711573538474</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711573538474</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <ignored-roots>\r\n      <path value=\"$PROJECT_DIR$/../..\" />\r\n    </ignored-roots>\r\n    <MESSAGE value=\"map\" />\r\n    <MESSAGE value=\"lol\" />\r\n    <MESSAGE value=\"con\" />\r\n    <MESSAGE value=\"Merge remote-tracking branch 'origin/construcor' into construcor\" />\r\n    <MESSAGE value=\"model\" />\r\n    <MESSAGE value=\"cambios\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"cambios\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0e329b98c8a16abac25443f3aa159bdb8f4b24c1)
++++ b/.idea/workspace.xml	(date 1711842329589)
+@@ -5,8 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="243c359d-8a84-4c6d-91b0-d574e53f3f21" name="Changes" comment="cambios">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/UsuarioViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/UsuarioViewController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -31,17 +30,17 @@
+     </option>
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$/.." value="main" />
++        <entry key="$PROJECT_DIR$/.." value="construcor" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "Casb29XD"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;Casb29XD&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+       <UrlAndAccount>
+@@ -68,27 +67,28 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;construcor&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/finia/OneDrive/Escritorio/Java-III-Diurna/banco_javafx&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.BancoApplication.executor": "Run",
++    "Application.HelloApplication.executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "Alex",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/finia/OneDrive/Escritorio/Java-III-Diurna/banco_javafx",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Project",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+Index: src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package co.edu.uniquindio.proyecto_final.proyecto_final.Controller;\r\n\r\nimport co.edu.uniquindio.proyecto_final.proyecto_final.Controller.Service.IModelFactoryService;\r\nimport co.edu.uniquindio.proyecto_final.proyecto_final.Exceptions.UsuarioException;\r\nimport co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.UsuarioDto;\r\nimport co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Mappers.SgreMapper;\r\nimport co.edu.uniquindio.proyecto_final.proyecto_final.Model.Sgre;\r\nimport co.edu.uniquindio.proyecto_final.proyecto_final.Model.Usuario;\r\nimport co.edu.uniquindio.proyecto_final.proyecto_final.Utils.SgreUtils;\r\n\r\nimport java.util.List;\r\n\r\npublic class ModelFactoryController implements IModelFactoryService {\r\n    Sgre sgre;\r\n    SgreMapper mapper = SgreMapper.INSTANCE;\r\n\r\n    public static class SingletonHolder{\r\n        private final static ModelFactoryController eINSTANCE = new ModelFactoryController();\r\n    }\r\n    public static ModelFactoryController getInstance() {\r\n        return SingletonHolder.eINSTANCE;\r\n    }\r\n\r\n    public ModelFactoryController() {\r\n        System.out.println(\"invocación clase singleton\");\r\n        cargarDatosBase();\r\n    }\r\n\r\n    private void cargarDatosBase() {\r\n        sgre = SgreUtils.InicializarDatos();\r\n    }\r\n\r\n    public Sgre getSgre() {\r\n        return sgre;\r\n    }\r\n\r\n    public void setSgre(Sgre sgre) {\r\n        this.sgre = sgre;\r\n    }\r\n\r\n    @Override\r\n    public List<UsuarioDto> obtenerUsuarios() {\r\n        return mapper.getUsuarioDto(sgre.getUsuarios());\r\n    }\r\n\r\n    @Override\r\n    public boolean agregarUsuario(UsuarioDto usuarioDto) {\r\n        try {\r\n            if (!sgre.verificarUsuario(usuarioDto.id())){\r\n                Usuario usuario= mapper.usuarioFtoToUsuario(usuarioDto);\r\n                getSgre().agregarUsuario(usuario);\r\n            }\r\n            return true;\r\n        }catch (UsuarioException e){\r\n            e.getMessage();\r\n            return false;\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public boolean eliminarUsuario(int id) {\r\n        boolean flagExiste = false;\r\n        try {\r\n            flagExiste = getSgre().eliminarUsuario(id);\r\n        } catch (UsuarioException e) {\r\n            // TODO Auto-generated catch block\r\n            e.printStackTrace();\r\n        }\r\n        return flagExiste;\r\n    }\r\n    @Override\r\n    public boolean actualizarUsuario(int id, UsuarioDto usuarioDto) {\r\n        try {\r\n            Usuario usuario = mapper.usuarioDtoFtoToUsuario(usuarioDto);\r\n            getSgre().actualizarUsuario(id,usuario);\r\n            return true;\r\n        } catch (UsuarioException e) {\r\n            e.printStackTrace();\r\n            return false;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java b/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java
+--- a/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java	(revision 0e329b98c8a16abac25443f3aa159bdb8f4b24c1)
++++ b/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java	(date 1711842262938)
+@@ -47,7 +47,7 @@
+     public boolean agregarUsuario(UsuarioDto usuarioDto) {
+         try {
+             if (!sgre.verificarUsuario(usuarioDto.id())){
+-                Usuario usuario= mapper.usuarioFtoToUsuario(usuarioDto);
++                Usuario usuario= mapper.usuarioDtoFtoToUsuario(usuarioDto);
+                 getSgre().agregarUsuario(usuario);
+             }
+             return true;
