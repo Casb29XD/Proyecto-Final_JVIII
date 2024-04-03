@@ -47,14 +47,14 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     @Override
-    public boolean agregarEmpleados(EmpleadoDto empleadoDto) {
+    public boolean agregarEmpleado(EmpleadoDto empleadoDto) {
         try {
-            if (!sgre.verificarUsuario(empleadoDto.id())){
+            if (!sgre.verificarEmpleado(empleadoDto.id())){
                 Empleado empleado= mapper.empleadoDtoFtoToempleado(empleadoDto);
                 getSgre().agregarEmpleado(empleado);
             }
             return true;
-        }catch (UsuarioException e){
+        }catch (EmpleadoException e){
             e.getMessage();
             return false;
         }

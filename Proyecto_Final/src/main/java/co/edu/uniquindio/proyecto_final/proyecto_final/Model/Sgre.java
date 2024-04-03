@@ -65,7 +65,7 @@ public class Sgre implements IEmpleadoService,IUsuarioService {
         }
         return nuevoEmpleado;
     }
-    public void agregarEmpleado(Empleado empleado) throws UsuarioException{
+    public void agregarEmpleado(Empleado empleado){
         getEmpleados().add(empleado);
     }
 
