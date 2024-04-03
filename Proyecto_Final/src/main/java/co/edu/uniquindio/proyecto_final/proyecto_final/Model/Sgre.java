@@ -1,14 +1,16 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.Model;
 
 import co.edu.uniquindio.proyecto_final.proyecto_final.Controller.Service.IEmpleadoControllerService;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Exceptions.EmpleadoException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Exceptions.UsuarioException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EmpleadoDto;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Model.services.IEmpleadoService;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Model.services.IUsuarioService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sgre implements IEmpleadoControllerService {
+public class Sgre implements IEmpleadoService {
 
     ArrayList<Usuario> usuarios = new ArrayList<>();
     ArrayList<Empleado> empleados = new ArrayList<>();
@@ -48,24 +50,36 @@ public class Sgre implements IEmpleadoControllerService {
     }
 
     @Override
-    public boolean agregarEmpleado(EmpleadoDto empleado) {
+    public Usuario crearEmpleado(String id, String nombre, String correo, ArrayList<Reserva> reserva) throws UsuarioException {
+        return null;
+    }
+
+    @Override
+    public boolean eliminarEmpleado(String id) throws EmpleadoException {
         return false;
     }
 
     @Override
-    public boolean eliminarEmpleado(String id) {
+    public boolean actualizarEmpleado(String id, Empleado empleado) throws EmpleadoException {
         return false;
     }
 
     @Override
-    public boolean actualizarEmpleado(String id, Empleado empleado) {
+    public boolean verificarEmpleado(String id) throws EmpleadoException {
         return false;
     }
 
     @Override
-    public List<Empleado> obtenerEmpleados() {
+    public Usuario obtenerEmpleado(String id) throws EmpleadoException {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Empleado> obtenerEmpleado() {
         return getEmpleados();
     }
+
+
 //crud de usuarios
    /* @Override
     public Usuario crearUsuario(String id, String nombre, String correo, ArrayList<Reserva> reserva) throws UsuarioException {
