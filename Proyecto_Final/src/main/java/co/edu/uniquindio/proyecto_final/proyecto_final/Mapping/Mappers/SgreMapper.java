@@ -23,7 +23,7 @@ public interface SgreMapper {
     //Mapper de los empleados
     @Named("empleadoToEmpleadoDto")
     EmpleadoDto empleadoToEmpleadoDto(Empleado empleado);
-    Empleado empleadoDtoFtoToempleado(UsuarioDto usuarioDto);
+    Empleado empleadoDtoFtoToempleado(EmpleadoDto empleadoDto);
     @IterableMapping(qualifiedByName = "empleadoToEmpleadoDto")
-    List<EmpleadoDto> getEmpleadoDtos(List<Empleado> Usuarios);
+    List<EmpleadoDto> getEmpleadoDtos(List<Empleado> empleado);
 }

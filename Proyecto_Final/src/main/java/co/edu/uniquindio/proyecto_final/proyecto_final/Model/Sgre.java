@@ -1,11 +1,14 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.Model;
 
+import co.edu.uniquindio.proyecto_final.proyecto_final.Controller.Service.IEmpleadoControllerService;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Exceptions.UsuarioException;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EmpleadoDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Model.services.IUsuarioService;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Sgre implements IUsuarioService {
+public class Sgre implements IEmpleadoControllerService {
 
     ArrayList<Usuario> usuarios = new ArrayList<>();
     ArrayList<Empleado> empleados = new ArrayList<>();
@@ -43,8 +46,28 @@ public class Sgre implements IUsuarioService {
     public void setReservas(ArrayList<Reserva> reservas) {
         this.reservas = reservas;
     }
-//crud de usuarios
+
     @Override
+    public boolean agregarEmpleado(EmpleadoDto empleado) {
+        return false;
+    }
+
+    @Override
+    public boolean eliminarEmpleado(String id) {
+        return false;
+    }
+
+    @Override
+    public boolean actualizarEmpleado(String id, Empleado empleado) {
+        return false;
+    }
+
+    @Override
+    public List<Empleado> obtenerEmpleados() {
+        return getEmpleados();
+    }
+//crud de usuarios
+   /* @Override
     public Usuario crearUsuario(String id, String nombre, String correo, ArrayList<Reserva> reserva) throws UsuarioException {
         Usuario nuevoUsuario= null;
         boolean usuarioExistente= verificarUsuario(id);
@@ -125,5 +148,5 @@ public class Sgre implements IUsuarioService {
     @Override
     public ArrayList<Usuario> obtenerUsuarios() {
         return getUsuarios();
-    }
+    }*/
 }

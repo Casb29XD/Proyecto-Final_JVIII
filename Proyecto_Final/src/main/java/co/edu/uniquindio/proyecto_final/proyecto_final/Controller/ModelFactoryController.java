@@ -1,9 +1,12 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.Controller;
 
 import co.edu.uniquindio.proyecto_final.proyecto_final.Controller.Service.IModelFactoryService;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Exceptions.EmpleadoException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Exceptions.UsuarioException;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EmpleadoDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.UsuarioDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Mappers.SgreMapper;
+import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Empleado;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Sgre;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Model.Usuario;
 import co.edu.uniquindio.proyecto_final.proyecto_final.Utils.SgreUtils;
@@ -39,16 +42,16 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     @Override
-    public List<UsuarioDto> obtenerUsuarios() {
-        return mapper.getUsuarioDto(sgre.getUsuarios());
+    public List<EmpleadoDto> obtenerEmpleados() {
+        return mapper.getEmpleadoDtos(sgre.getEmpleados());
     }
 
     @Override
-    public boolean agregarUsuario(UsuarioDto usuarioDto) {
+    public boolean agregarEmpleados(EmpleadoDto empleadoDto) {
         try {
-            if (!sgre.verificarUsuario(usuarioDto.id())){
-                Usuario usuario= mapper.usuarioDtoFtoToUsuario(usuarioDto);
-                getSgre().agregarUsuario(usuario);
+            if (!sgre.verificarUsuario(empleadoDto.id())){
+                Empleado empleado= mapper.empleadoDtoFtoToempleado(empleadoDto);
+                getSgre().agregarEmpleado(empleado);
             }
             return true;
         }catch (UsuarioException e){
@@ -58,23 +61,23 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     @Override
-    public boolean eliminarUsuario(String id) {
+    public boolean eliminarEmpleado(String id) {
         boolean flagExiste = false;
         try {
-            flagExiste = getSgre().eliminarUsuario(id);
-        } catch (UsuarioException e) {
+            flagExiste = getSgre().eliminarEmpleado(id);
+        } catch (EmpleadoException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return flagExiste;
     }
     @Override
-    public boolean actualizarUsuario(String id, UsuarioDto usuarioDto) {
+    public boolean actualizarEmpleado(String id, EmpleadoDto empleadoDto) {
         try {
-            Usuario usuario = mapper.usuarioDtoFtoToUsuario(usuarioDto);
-            getSgre().actualizarUsuario(id,usuario);
+            Empleado empleado = mapper.empleadoDtoFtoToempleado(empleadoDto);
+            getSgre().actualizarEmpleado(id,empleado);
             return true;
-        } catch (UsuarioException e) {
+        } catch (EmpleadoException e) {
             e.printStackTrace();
             return false;
         }
