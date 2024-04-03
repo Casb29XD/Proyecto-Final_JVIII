@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b3546d73-f5ab-4fdb-875b-91ea5b40a6b3" name="Changes" comment="Funciona">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/blobs/version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_04_2024_4_41_p__m___Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_04_2024_4_41_p_ m__[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_04_2024_3_42_p__m___Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_04_2024_3_42_p__m___Changes_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_04_2024_3_42_p_ m__[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_04_2024_3_42_p_ m__[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_04_2024_6_42_p__m___Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_04_2024_6_42_p_ m__[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/BancoViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/EmpleadoViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto_Final/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/BancoView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto_Final/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/EmpleadoView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/EmpleadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/UsuarioViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto_Final/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto_Final/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/hello-view.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Alex" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2eW5lHrwxcfv508EPwNMhFqaM62" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.BancoApplication.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Maven.Proyecto_Final [compile].executor": "Run",
+    "Maven.Proyecto_Final [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Alex2",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/neide/IdeaProjects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Proyecto-Final_JVIII" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Proyecto-Final_JVIII" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3546d73-f5ab-4fdb-875b-91ea5b40a6b3" name="Changes" comment="" />
+      <created>1712007643222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712007643222</updated>
+      <workItem from="1712007644287" duration="2856000" />
+      <workItem from="1712087163638" duration="3291000" />
+      <workItem from="1712090503629" duration="1531000" />
+      <workItem from="1712101317217" duration="9718000" />
+      <workItem from="1712117988772" duration="681000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Funciona" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funciona" />
+  </component>
+</project>
