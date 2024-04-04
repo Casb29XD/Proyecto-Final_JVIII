@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="243c359d-8a84-4c6d-91b0-d574e53f3f21" name="Changes" comment="cambios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/EmpleadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Controller/ModelFactoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Mapping/Mappers/SgreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Mapping/Mappers/SgreMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Utils/SgreUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/Utils/SgreUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/EmpleadoViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/EmpleadoViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +70,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HelloApplication.executor": "Debug",
+    "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -120,7 +115,7 @@
       <workItem from="1711555246988" duration="5029000" />
       <workItem from="1711650202718" duration="1442000" />
       <workItem from="1712120619341" duration="114000" />
-      <workItem from="1712191597980" duration="6017000" />
+      <workItem from="1712191597980" duration="7938000" />
     </task>
     <task id="LOCAL-00001" summary="map">
       <option name="closed" value="true" />

@@ -3,7 +3,7 @@ module co.edu.uniquindio.proyecto_final.proyecto_final {
     requires javafx.fxml;
     requires org.mapstruct;
 
-    opens co.edu.uniquindio.proyecto_final.proyecto_final.ViewController to javafx.fxml;
+    opens co.edu.uniquindio.proyecto_final.proyecto_final.viewController to javafx.fxml;
 
     opens co.edu.uniquindio.proyecto_final.proyecto_final to javafx.fxml;
 
