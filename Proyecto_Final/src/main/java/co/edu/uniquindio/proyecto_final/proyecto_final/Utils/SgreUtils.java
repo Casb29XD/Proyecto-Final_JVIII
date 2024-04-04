@@ -8,7 +8,46 @@ import java.util.ArrayList;
 
 public class SgreUtils {
 
-    public static Sgre InicializarDatos(){
+    public static Sgre inicializarDatos(){
+        Sgre sgre = new Sgre();
+        Empleado empleado = new Empleado();
+        empleado.setId("34892");
+        empleado.setNombre("Juan Pérez");
+        empleado.setCorreo("juan.perez@Gmail.com");
+        empleado.setEvento(new ArrayList<>());
+        sgre.getEmpleados().add(empleado);
+
+        empleado = new Empleado();
+        empleado.setId("10273");
+        empleado.setNombre("Ana García");
+        empleado.setCorreo("ana.garcia85@gmail.com");
+        empleado.setEvento(new ArrayList<>());
+        sgre.getEmpleados().add(empleado);
+
+        empleado = new Empleado();
+        empleado.setId("45781");
+        empleado.setNombre("Javier Martínez");
+        empleado.setCorreo(" javier.martinez92@gmail.com");
+        empleado.setEvento(new ArrayList<>());
+        sgre.getEmpleados().add(empleado);
+
+        empleado = new Empleado();
+        empleado.setId("30894");
+        empleado.setNombre("María Rodríguez");
+        empleado.setCorreo("m.rodriguez78@gmail.com");
+        empleado.setEvento(new ArrayList<>());
+        sgre.getEmpleados().add(empleado);
+
+        empleado = new Empleado();
+        empleado.setId("81537");
+        empleado.setNombre("Pablo López");
+        empleado.setCorreo("pablo.lopez89@gmail.com");
+        empleado.setEvento(new ArrayList<>());
+        sgre.getEmpleados().add(empleado);
+
+        return sgre;
+    }
+    public static Sgre InicializarDatosUsuario() {
         Sgre sgre = new Sgre();
         Usuario usuario = new Usuario();
         usuario.setId("34892");
@@ -44,38 +83,6 @@ public class SgreUtils {
         usuario.setCorreo("pablo.lopez89@gmail.com");
         usuario.setReserva(new ArrayList<>());
         sgre.getUsuarios().add(usuario);
-
-        return sgre;
-    }
-    public static Sgre InicializarDatosUsuario() {
-        Sgre sgre = new Sgre();
-        Empleado empleado= new Empleado();
-        empleado.setId("");
-        empleado.setNombre("");
-        empleado.setCorreo("@gmail.com");
-        empleado.setEvento(new ArrayList<>());
-        sgre.getEmpleados().add(empleado);
-
-        empleado= new Empleado();
-        empleado.setId("");
-        empleado.setNombre("");
-        empleado.setCorreo("@gmail.com");
-        empleado.setEvento(new ArrayList<>());
-        sgre.getEmpleados().add(empleado);
-
-        empleado= new Empleado();
-        empleado.setId("");
-        empleado.setNombre("");
-        empleado.setCorreo("@gmail.com");
-        empleado.setEvento(new ArrayList<>());
-        sgre.getEmpleados().add(empleado);
-        
-        empleado= new Empleado();
-        empleado.setId("");
-        empleado.setNombre("");
-        empleado.setCorreo("@gmail.com");
-        empleado.setEvento(new ArrayList<>());
-        sgre.getEmpleados().add(empleado);
         return sgre;
     }
 }

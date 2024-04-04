@@ -30,7 +30,7 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     private void cargarDatosBase() {
-        sgre = SgreUtils.InicializarDatos();
+        sgre = SgreUtils.inicializarDatos();
     }
 
     public Sgre getSgre() {
@@ -43,14 +43,14 @@ public class ModelFactoryController implements IModelFactoryService {
 
     @Override
     public List<EmpleadoDto> obtenerEmpleados() {
-        return mapper.getEmpleadoDtos(sgre.getEmpleados());
+        return mapper.getEmpleadosDto(sgre.getEmpleados());
     }
 
     @Override
     public boolean agregarEmpleado(EmpleadoDto empleadoDto) {
         try {
             if (!sgre.verificarEmpleado(empleadoDto.id())){
-                Empleado empleado= mapper.empleadoDtoFtoToempleado(empleadoDto);
+                Empleado empleado= mapper.empleadoDtoToEmpleado(empleadoDto);
                 getSgre().agregarEmpleado(empleado);
             }
             return true;
@@ -74,7 +74,7 @@ public class ModelFactoryController implements IModelFactoryService {
     @Override
     public boolean actualizarEmpleado(String id, EmpleadoDto empleadoDto) {
         try {
-            Empleado empleado = mapper.empleadoDtoFtoToempleado(empleadoDto);
+            Empleado empleado = mapper.empleadoDtoToEmpleado(empleadoDto);
             getSgre().actualizarEmpleado(id,empleado);
             return true;
         } catch (EmpleadoException e) {

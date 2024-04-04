@@ -9,6 +9,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
+import java.util.ArrayList;
 import java.util.Optional;
 
 public class EmpleadoViewController {
@@ -84,8 +86,8 @@ public class EmpleadoViewController {
 
     private void mostrarInformacionEmpleado(EmpleadoDto empleadoSeleccionado) {
         if(empleadoSeleccionado != null){
-            txtNombre.setText(empleadoSeleccionado.nombre());
             txtId.setText(empleadoSeleccionado.id());
+            txtNombre.setText(empleadoSeleccionado.nombre());
             txtCorreo.setText(empleadoSeleccionado.correo());
         }
     }
@@ -180,8 +182,7 @@ public class EmpleadoViewController {
                 txtNombre.getText(),
                 txtId.getText(),
                 txtCorreo.getText(),
-                null
-
+                new ArrayList<>()
         );
     }
 
