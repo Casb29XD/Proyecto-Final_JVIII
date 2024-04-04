@@ -1,0 +1,257 @@
+Index: Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/BancoApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package co.edu.uniquindio.proyecto_final.proyecto_final;\r\n\r\nimport co.edu.uniquindio.proyecto_final.proyecto_final.ViewController.BancoViewController;\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.layout.AnchorPane;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.IOException;\r\n\r\npublic class BancoApplication extends Application {\r\n    private Stage primaryStage;\r\n    @Override\r\n    public void start(Stage stage) throws IOException {\r\n        this.primaryStage = stage;\r\n        this.primaryStage.setTitle(\"Banco UQ\");\r\n        mostrarVentanaPrincipal();\r\n    }\r\n    public void mostrarVentanaPrincipal() {\r\n        try {\r\n            FXMLLoader loader = new FXMLLoader();\r\n            loader.setLocation(BancoApplication.class.getResource(\"BancoView.fxml\"));\r\n            AnchorPane rootLayout = (AnchorPane) loader.load();\r\n            BancoViewController bancoViewController = loader.getController();\r\n//            bancoViewController.setAplicacion(this);\r\n            // Show the scene containing the root layout.\r\n            Scene scene = new Scene(rootLayout);\r\n            //scene.getStylesheets().add(getClass().getResource(\"estilos.css\").toExternalForm());\r\n            primaryStage.setScene(scene);\r\n            primaryStage.show();\r\n        } catch (IOException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n\r\n        launch();\r\n    }\r\n}
+===================================================================
+diff --git a/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/BancoApplication.java b/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/BancoApplication.java
+--- a/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/BancoApplication.java	
++++ b/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/BancoApplication.java	
+@@ -1,41 +1,27 @@
+ package co.edu.uniquindio.proyecto_final.proyecto_final;
+ 
+-import co.edu.uniquindio.proyecto_final.proyecto_final.ViewController.BancoViewController;
+ import javafx.application.Application;
+ import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
+ import javafx.scene.Scene;
+-import javafx.scene.layout.AnchorPane;
+ import javafx.stage.Stage;
+ 
+-import java.io.IOException;
+-
+ public class BancoApplication extends Application {
+-    private Stage primaryStage;
++
+     @Override
+-    public void start(Stage stage) throws IOException {
+-        this.primaryStage = stage;
+-        this.primaryStage.setTitle("Banco UQ");
+-        mostrarVentanaPrincipal();
+-    }
+-    public void mostrarVentanaPrincipal() {
+-        try {
+-            FXMLLoader loader = new FXMLLoader();
+-            loader.setLocation(BancoApplication.class.getResource("BancoView.fxml"));
+-            AnchorPane rootLayout = (AnchorPane) loader.load();
+-            BancoViewController bancoViewController = loader.getController();
+-//            bancoViewController.setAplicacion(this);
+-            // Show the scene containing the root layout.
+-            Scene scene = new Scene(rootLayout);
+-            //scene.getStylesheets().add(getClass().getResource("estilos.css").toExternalForm());
+-            primaryStage.setScene(scene);
+-            primaryStage.show();
+-        } catch (IOException e) {
+-            e.printStackTrace();
+-        }
++    public void start(Stage primaryStage) throws Exception {
++        // Cargar el archivo FXML desde la ruta correcta
++        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/proyecto_final/proyecto_final/BancoView.fxml"));
++        Parent root = loader.load();
++
++        // Configurar la escena
++        Scene scene = new Scene(root);
++        primaryStage.setScene(scene);
++        primaryStage.setTitle("Banco Application");
++        primaryStage.show();
+     }
+ 
+     public static void main(String[] args) {
+-
+-        launch();
++        launch(args);
+     }
+-}
+\ No newline at end of file
++}
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Default ignored files\r\n/shelf/\r\n/workspace.xml\r\n# GitHub Copilot persisted chat sessions\r\n/copilot/chatSessions\r\n
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+--- a/.idea/.gitignore	
++++ b/.idea/.gitignore	
+@@ -1,5 +1,10 @@
+ # Default ignored files
+ /shelf/
+ /workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+ # GitHub Copilot persisted chat sessions
+ /copilot/chatSessions
+Index: Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/BancoViewController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package co.edu.uniquindio.proyecto_final.proyecto_final.ViewController;\r\n\r\npublic class BancoViewController {\r\n\r\n}\r\n
+===================================================================
+diff --git a/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/BancoViewController.java b/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/BancoViewController.java
+--- a/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/BancoViewController.java	
++++ b/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/ViewController/BancoViewController.java	
+@@ -1,5 +1,17 @@
+ package co.edu.uniquindio.proyecto_final.proyecto_final.ViewController;
+ 
++import javafx.fxml.FXML;
++import javafx.scene.control.Tab;
++
+ public class BancoViewController {
+ 
++    @FXML
++    private Tab TabTransacciones;
++
++    @FXML
++    private Tab TabEmpleado;
++
++    @FXML
++    private Tab TabCliente;
++
+ }
+Index: .idea/Proyecto-Final_JVIII.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+===================================================================
+diff --git a/.idea/Proyecto-Final_JVIII.iml b/.idea/Proyecto-Final_JVIII.iml
+--- a/.idea/Proyecto-Final_JVIII.iml	
++++ b/.idea/Proyecto-Final_JVIII.iml	
+@@ -2,7 +2,9 @@
+ <module type="JAVA_MODULE" version="4">
+   <component name="NewModuleRootManager" inherit-compiler-output="true">
+     <exclude-output />
+-    <content url="file://$MODULE_DIR$" />
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.idea/copilot/chatSessions" />
++    </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+Index: Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/MainBanco.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package co.edu.uniquindio.proyecto_final.proyecto_final;\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Label;\r\n\r\npublic class MainBanco {\r\n    @FXML\r\n    private Label welcomeText;\r\n\r\n    @FXML\r\n    protected void onHelloButtonClick() {\r\n\r\n        welcomeText.setText(\"Welcome to JavaFX Application!\");\r\n    }\r\n}
+===================================================================
+diff --git a/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/MainBanco.java b/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/MainBanco.java
+--- a/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/MainBanco.java	
++++ b/Proyecto_Final/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/MainBanco.java	
+@@ -1,15 +1,35 @@
+-package co.edu.uniquindio.proyecto_final.proyecto_final;
++package co.edu.uniquindio.banco.bancouq;
+ 
+-import javafx.fxml.FXML;
+-import javafx.scene.control.Label;
++import co.edu.uniquindio.proyecto_final.proyecto_final.Controller.ModelFactoryController
++import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.EmpleadoDto;
++import co.edu.uniquindio.proyecto_final.proyecto_final.Mapping.Dto.UsuarioDto;
++
++import java.util.List;
+ 
+ public class MainBanco {
+-    @FXML
+-    private Label welcomeText;
++
++    public static void main(String[] args) {
++        ModelFactoryController modelFactoryController = ModelFactoryController.getInstance();
+ 
+-    @FXML
+-    protected void onHelloButtonClick() {
++        UsuarioDto empleadoDto = new EmpleadoDto(
++                "juan",
++                "arias",
++                "546",
++                "654",
++                "armenia",
++                "",
++                "",
++                200000.0,
++                "1232"
++        );
+ 
+-        welcomeText.setText("Welcome to JavaFX Application!");
++        if(modelFactoryController.agregarUsuario(empleadoDto)){
++            System.out.println("No existe se agrgeo correctamente");
++        }else{
++            System.out.println("Ya existe");
++        }
++
++        List<UsuarioDto> empleadoDtoList = modelFactoryController.obtenerUsuarios();
++        empleadoDtoList.forEach(System.out::println);
+     }
+ }
+\ No newline at end of file
+Index: Proyecto_Final/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/BancoView.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.SplitPane?>\r\n<?import javafx.scene.control.Tab?>\r\n<?import javafx.scene.control.TabPane?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n\r\n<AnchorPane prefHeight=\"655.0\" prefWidth=\"880.0\" xmlns=\"http://javafx.com/javafx/8.0.171\"\r\n            xmlns:fx=\"http://javafx.com/fxml/1\"\r\n            fx:controller=\"co.edu.uniquindio.proyecto_final.proyecto_final.ViewController.BancoViewController\">\r\n  <TabPane layoutX=\"8.0\" layoutY=\"8.0\" prefHeight=\"642.0\" prefWidth=\"865.0\" tabClosingPolicy=\"UNAVAILABLE\">\r\n    <Tab text=\"Empleado\">\r\n      <AnchorPane minHeight=\"0.0\" minWidth=\"0.0\" prefHeight=\"180.0\" prefWidth=\"200.0\">\r\n        <SplitPane layoutX=\"6.0\" layoutY=\"6.0\" orientation=\"VERTICAL\" prefHeight=\"542.0\" prefWidth=\"790.0\">\r\n          <fx:include source=\"EmpleadoView.fxml\"/>\r\n        </SplitPane>\r\n      </AnchorPane>\r\n    </Tab>\r\n    <Tab text=\"Transacciones\">\r\n      <AnchorPane minHeight=\"0.0\" minWidth=\"0.0\" prefHeight=\"180.0\" prefWidth=\"200.0\">\r\n        <SplitPane layoutX=\"6.0\" layoutY=\"6.0\" orientation=\"VERTICAL\" prefHeight=\"542.0\" prefWidth=\"790.0\">\r\n          <fx:include source=\"TransaccionesView.fxml\"/>\r\n        </SplitPane>\r\n      </AnchorPane>\r\n    </Tab>\r\n    <Tab text=\"Cliente\">\r\n      <AnchorPane minHeight=\"0.0\" minWidth=\"0.0\" prefHeight=\"180.0\" prefWidth=\"200.0\">\r\n        <SplitPane layoutX=\"6.0\" layoutY=\"6.0\" orientation=\"VERTICAL\" prefHeight=\"542.0\" prefWidth=\"790.0\">\r\n          <fx:include source=\"ClienteView.fxml\"/>\r\n        </SplitPane>\r\n      </AnchorPane>\r\n    </Tab>\r\n  </TabPane>\r\n</AnchorPane>
+===================================================================
+diff --git a/Proyecto_Final/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/BancoView.fxml b/Proyecto_Final/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/BancoView.fxml
+--- a/Proyecto_Final/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/BancoView.fxml	
++++ b/Proyecto_Final/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/BancoView.fxml	
+@@ -1,34 +1,35 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import javafx.scene.control.SplitPane?>
+-<?import javafx.scene.control.Tab?>
+-<?import javafx.scene.control.TabPane?>
+-<?import javafx.scene.layout.AnchorPane?>
++<?import javafx.scene.control.*?>
++<?import javafx.scene.layout.*?>
+ 
+-<AnchorPane prefHeight="655.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.171"
+-            xmlns:fx="http://javafx.com/fxml/1"
++
++<AnchorPane prefHeight="655.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+             fx:controller="co.edu.uniquindio.proyecto_final.proyecto_final.ViewController.BancoViewController">
+-  <TabPane layoutX="8.0" layoutY="8.0" prefHeight="642.0" prefWidth="865.0" tabClosingPolicy="UNAVAILABLE">
+-    <Tab text="Empleado">
+-      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+-        <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="790.0">
+-          <fx:include source="EmpleadoView.fxml"/>
+-        </SplitPane>
+-      </AnchorPane>
+-    </Tab>
+-    <Tab text="Transacciones">
+-      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+-        <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="790.0">
+-          <fx:include source="TransaccionesView.fxml"/>
+-        </SplitPane>
+-      </AnchorPane>
+-    </Tab>
+-    <Tab text="Cliente">
+-      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+-        <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="790.0">
+-          <fx:include source="ClienteView.fxml"/>
+-        </SplitPane>
+-      </AnchorPane>
+-    </Tab>
+-  </TabPane>
+-</AnchorPane>
+\ No newline at end of file
++    <TabPane layoutX="8.0" layoutY="8.0" prefHeight="642.0" prefWidth="865.0" tabClosingPolicy="UNAVAILABLE">
++        <Tab fx:id="TabEmpleado" text="Empleado">
++            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
++                <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0"
++                           prefWidth="790.0">
++                    <fx:include source="EmpleadoView.fxml"/>
++                </SplitPane>
++            </AnchorPane>
++        </Tab>
++        <Tab fx:id="TabTransacciones" text="Transacciones">
++            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
++                <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0"
++                           prefWidth="790.0">
++                    <fx:include source="TransaccionesView.fxml"/>
++                </SplitPane>
++            </AnchorPane>
++        </Tab>
++        <Tab fx:id="TabCliente" text="Cliente">
++            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
++                <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0"
++                           prefWidth="790.0">
++                    <fx:include source="ClienteView.fxml"/>
++                </SplitPane>
++            </AnchorPane>
++        </Tab>
++    </TabPane>
++</AnchorPane>
