@@ -66,7 +66,7 @@ public class EmpleadoViewController {
     }
 
     private void initDataBinding() {
-        tcNombre.setCellValueFactory(cellData -> new SimpleStringProperty(      cellData.getValue().nombre()));
+        tcNombre.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().nombre()));
         tcId.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().id()));
         tcCorreo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().correo()));
     }
@@ -92,9 +92,9 @@ public class EmpleadoViewController {
 
     @FXML
     void nuevoEmpleadoAction(ActionEvent event) {
-        txtNombre.setText("Ingrese el nombre");
-        txtId.setText("Ingrese la cedula");
-        txtCorreo.setText("Ingrese el correo");
+        txtNombre.setText("");
+        txtId.setText("");
+        txtCorreo.setText("");
     }
 
     @FXML
@@ -108,7 +108,6 @@ public class EmpleadoViewController {
     }
     @FXML
     void actualizarEmpleadoAction(ActionEvent event) {
-
         actualizarEmpleado();
     }
 
@@ -194,10 +193,18 @@ public class EmpleadoViewController {
 
     private boolean datosValidos(EmpleadoDto empleadoDto) {
         String mensaje = "";
-        if(empleadoDto.nombre() == null || empleadoDto.nombre().equals(""))
+        if(empleadoDto.id()==null || empleadoDto.id().equals("")){
+            mensaje += "El id es invalido \n" ;
+        }
+        if(empleadoDto.nombre()==null || empleadoDto.nombre().equals("")){
             mensaje += "El nombre es invalido \n" ;
-        if(empleadoDto.id() == null || empleadoDto.id().equals(""))
-            mensaje += "El documento es invalido \n" ;
+        }
+        if(empleadoDto.correo()==null || empleadoDto.correo().equals("")){
+            mensaje += "El correo es invalido \n" ;
+        }
+        if(empleadoDto.id()==null || empleadoDto.id().equals("")){
+            mensaje += "El nombre es invalido \n" ;
+        }
         if(mensaje.equals("")){
             return true;
         }else{

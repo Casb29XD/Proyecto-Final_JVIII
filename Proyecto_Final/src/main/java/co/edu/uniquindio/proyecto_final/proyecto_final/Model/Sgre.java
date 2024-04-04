@@ -77,7 +77,7 @@ public class Sgre implements IEmpleadoService,IUsuarioService {
         if (empleado == null){
             throw new EmpleadoException("El Empleado no se encuentra registrado");
         }else {
-            getUsuarios().remove(empleado);
+            getEmpleados().remove(empleado);
             existe=true;
         }
         return existe;
