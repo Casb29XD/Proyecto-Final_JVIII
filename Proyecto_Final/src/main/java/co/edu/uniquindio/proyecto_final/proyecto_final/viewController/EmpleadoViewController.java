@@ -54,6 +54,7 @@ public class EmpleadoViewController {
     @FXML
     private Button btnActualizar;
 
+    @FXML
     void initialize() {
         empleadoController = new EmpleadoController();
         intiView();
