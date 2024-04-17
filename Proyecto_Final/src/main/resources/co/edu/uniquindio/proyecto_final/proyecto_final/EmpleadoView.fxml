@@ -4,7 +4,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="656.0" style="-fx-background-color: #81BCBD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto_final.proyecto_final.ViewController.EmpleadoViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="656.0" style="-fx-background-color: #81BCBD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto_final.proyecto_final.viewController.EmpleadoViewController">
    <children>
        <TableView fx:id="tableEmpleados" layoutY="245.0" prefHeight="166.0" prefWidth="656.0" style="-fx-background-color: B0B8B8;">
          <columns>
