@@ -6,11 +6,14 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EmpleadoDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.mappers.SgreMapper;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.Empleado;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.Sgre;
+import co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.SgreUtils;
 
 import java.io.IOException;
 import java.util.List;
+
+import static co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia.RUTA_ARCHIVO_EMPLEADOS;
 
 public class ModelFactoryController implements IModelFactoryService {
     Sgre sgre;
@@ -29,33 +32,34 @@ public class ModelFactoryController implements IModelFactoryService {
 
     public ModelFactoryController() {
         System.out.println("invocación clase singleton");
-        cargarDatosBase();
-        registrarAccionesSistema("Inicio de sesión", 1, "inicioSesion");
-        /*
 
- // cargarDatosBase();
-//        salvarDatosPrueba();
+        //cargarDatosBase();
+        //salvarDatosPrueba();
 
         //2. Cargar los datos de los archivos
-//		cargarDatosDesdeArchivos();
+		//cargarDatosDesdeArchivos();
 
         //3. Guardar y Cargar el recurso serializable binario
-//		cargarResourceBinario();
-//		guardarResourceBinario();
+
+		//cargarResourceBinario();
+		//guardarResourceBinario();
 
         //4. Guardar y Cargar el recurso serializable XML
-//		guardarResourceXML();
+		guardarResourceXML();
         cargarResourceXML();
 
         //Siempre se debe verificar si la raiz del recurso es null
 
-        if(banco == null){
+        if(sgre == null){
+
             cargarDatosBase();
             guardarResourceXML();
+            cargarDatosDesdeArchivos();
+            cargarResourceXML();
         }
         registrarAccionesSistema("Inicio de sesión", 1, "inicioSesión");
 
-         */
+
     }
 
     private void cargarDatosDesdeArchivos() {
@@ -97,45 +101,47 @@ public class ModelFactoryController implements IModelFactoryService {
 
     @Override
     public boolean agregarEmpleado(EmpleadoDto empleadoDto) {
-        try{
-            if(!sgre.verificarEmpleadoExistente(empleadoDto.id())) {
-                Empleado empleado = mapper.empleadoDtoToEmpleado(empleadoDto);
-                getSgre().agregarEmpleado(empleado);
-                registrarAccionesSistema("Se agrego el empleado"+ empleado.getNombre(),1,"agregarEmpleado");
-                guardarResourceXML();
-                //
-            }
+        try {
+            Empleado empleado = mapper.empleadoDtoToEmpleado(empleadoDto);
+            getSgre().agregarEmpleado(empleado);
+            Persistencia.guardarEmpleados(getSgre().getEmpleados());
             return true;
-        }catch (EmpleadoException e){
-            e.getMessage();
+        } catch (IOException e) {
+            e.printStackTrace();
             return false;
         }
     }
 
     @Override
     public boolean eliminarEmpleado(String id) {
-        boolean flagExiste = false;
         try {
-            flagExiste = getSgre().eliminarEmpleado(id);
-        } catch (EmpleadoException e) {
-            // TODO Auto-generated catch block
+            boolean flagExiste = getSgre().eliminarEmpleado(id);
+            if (flagExiste) {
+                Persistencia.guardarEmpleados(getSgre().getEmpleados());
+                guardarResourceXML();
+            }
+            return flagExiste;
+        } catch (IOException | EmpleadoException e) {
             e.printStackTrace();
+            return false;
         }
-        return flagExiste;
     }
 
     @Override
     public boolean actualizarEmpleado(String id, EmpleadoDto empleadoDto) {
         try {
             Empleado empleado = mapper.empleadoDtoToEmpleado(empleadoDto);
-            getSgre().actualizarEmpleado(id, empleado);
-            return true;
-        } catch (EmpleadoException e) {
+            boolean resultado = getSgre().actualizarEmpleado(id, empleado);
+            if (resultado) {
+                Persistencia.guardarEmpleados(getSgre().getEmpleados());
+                guardarResourceXML();
+            }
+            return resultado;
+        } catch (IOException | EmpleadoException e) {
             e.printStackTrace();
             return false;
         }
     }
-
 
     private void cargarResourceXML() {
         sgre = Persistencia.cargarRecursosSgreXML();

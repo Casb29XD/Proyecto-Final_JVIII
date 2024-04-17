@@ -10,7 +10,6 @@ module co.edu.uniquindio.proyecto_final.proyecto_final {
     opens co.edu.uniquindio.proyecto_final.proyecto_final to javafx.fxml;
 
     exports co.edu.uniquindio.proyecto_final.proyecto_final;
-   // opens co.edu.uniquindio.proyecto_final.proyecto_final.viewController to javafx.fxml;
     exports co.edu.uniquindio.proyecto_final.proyecto_final.controller;
     exports co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto;
     exports co.edu.uniquindio.proyecto_final.proyecto_final.mapping.mappers;
