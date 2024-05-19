@@ -1,8 +1,12 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.controller;
 
+import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.IEmpleadoControllerService;
 import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.IModelFactoryService;
+import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.IReservaControllerService;
+import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.IUsuarioControllerService;
 import co.edu.uniquindio.proyecto_final.proyecto_final.exceptions.EmpleadoException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EmpleadoDto;
+import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.mappers.SgreMapper;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.Empleado;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.Sgre;
@@ -15,9 +19,10 @@ import java.util.List;
 
 import static co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia.RUTA_ARCHIVO_EMPLEADOS;
 
-public class ModelFactoryController implements IModelFactoryService {
+public class ModelFactoryController implements IModelFactoryService, IUsuarioControllerService {
     Sgre sgre;
     SgreMapper mapper = SgreMapper.INSTANCE;
+
 
     //------------------------------  Singleton ------------------------------------------------
     // Clase estatica oculta. Tan solo se instanciara el singleton una vez
@@ -37,7 +42,7 @@ public class ModelFactoryController implements IModelFactoryService {
         //salvarDatosPrueba();
 
         //2. Cargar los datos de los archivos
-		//cargarDatosDesdeArchivos();
+		cargarDatosDesdeArchivos();
 
         //3. Guardar y Cargar el recurso serializable binario
 
@@ -84,7 +89,6 @@ public class ModelFactoryController implements IModelFactoryService {
         sgre = SgreUtils.InicializarDatos();
     }
 
-
     public Sgre getSgre() {
         return sgre;
     }
@@ -93,7 +97,7 @@ public class ModelFactoryController implements IModelFactoryService {
         this.sgre = sgre;
     }
 
-
+//empleado
     @Override
     public List<EmpleadoDto> obtenerEmpleados() {
         return  mapper.getEmpleadosDto(sgre.getEmpleados());
@@ -142,6 +146,30 @@ public class ModelFactoryController implements IModelFactoryService {
             return false;
         }
     }
+
+//usuario
+    @Override
+    public List<UsuarioDto> obtenerUsuarios() {
+        return List.of();
+    }
+
+    @Override
+    public boolean agregarUsuario(UsuarioDto usuario) {
+        return false;
+    }
+
+    @Override
+    public boolean eliminarUsuario(String id) {
+        return false;
+    }
+
+    @Override
+    public boolean actualizarUsuario(String id, UsuarioDto usuario) {
+        return false;
+    }
+
+//Evento
+
 
     private void cargarResourceXML() {
         sgre = Persistencia.cargarRecursosSgreXML();
