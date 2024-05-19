@@ -81,7 +81,7 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     private void cargarDatosBase() {
-        sgre = SgreUtils.InicializarDatosEmpleados();
+        sgre = SgreUtils.InicializarDatos();
     }
 
 

@@ -56,7 +56,7 @@ public class Persistencia {
         String linea;
         while ((linea = bfr.readLine()) != null) {
             String[] partes = linea.split("@@");
-            if (partes.length == 3) {
+            if (partes.length >= 3) {
                 Empleado empleado = new Empleado();
                 empleado.setId(partes[0]);
                 empleado.setNombre(partes[1]);
