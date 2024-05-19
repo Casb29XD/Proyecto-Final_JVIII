@@ -159,7 +159,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     public boolean actualizarUsuario(String id, Usuario usuario) throws UsuarioException {
         Usuario usaurioactual = obtenerUsuario(id);
         if (usaurioactual == null){
-            throw new UsuarioException("Ese Empleado no existe");
+            throw new UsuarioException("Ese Usuario no existe");
         }else {
             usaurioactual.setNombre(usuario.getNombre());
             usaurioactual.setId(usuario.getId());
@@ -171,7 +171,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     @Override
     public boolean verificarUsuario(String id) throws UsuarioException {
         if (usuarioExiste(id)){
-            throw new UsuarioException("El Empleado con id: " +id+" ya se encuentra registrado");
+            throw new UsuarioException("El Usuario con id: " +id+" ya se encuentra registrado");
         }else {
             return false;
         }
@@ -200,7 +200,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         Reserva nuevoReserva= null;
         boolean ReservaExistente= verificarReservaExistente(id);
         if (usuarioExiste(id)){
-            throw new ReservaException("El usuario con Id: "+id+" ya se encuentra registrado");
+            throw new ReservaException("La Reserva con Id: "+id+" ya se encuentra registrado");
         }else {
             nuevoReserva.setId(id);
             nuevoReserva.setUsuario(usuario);
@@ -217,7 +217,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         boolean existe=false;
         reserva = obtenerReserva(id);
         if (reserva == null){
-            throw new ReservaException("El Usuario no se encuentra registrado");
+            throw new ReservaException("El Reserva no se encuentra registrado");
         }else {
             getUsuarios().remove(reserva);
             existe=true;
@@ -229,7 +229,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     public boolean actualizarReserva(String id, Reserva reserva) throws ReservaException {
         Reserva reservaactual = obtenerReserva(id);
         if (reservaactual == null){
-            throw new ReservaException("Ese Empleado no existe");
+            throw new ReservaException("Ese Reserva no existe");
         }else {
             reservaactual.setId(reserva.getId());
             reservaactual.setUsuario(reserva.getUsuario());
@@ -243,7 +243,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     @Override
     public boolean verificarReservaExistente(String id) throws ReservaException {
         if (ReservaExiste(id)){
-            throw new ReservaException("El Empleado con id: " +id+" ya se encuentra registrado");
+            throw new ReservaException("La Reserva con id: " +id+" ya se encuentra registrado");
         }else {
             return false;
         }
@@ -268,28 +268,71 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
 //Evento
 
     @Override
-    public Evento crearEvento(String nombre, String descripcion, String fecha, String capacidadMaxima, String empleado, List<Reserva> reservaList) throws EventoExceprion {
-        return null;
+    public Evento crearEvento(String id,String nombre, String descripcion, String fecha, String capacidadMaxima, String empleado, List<Reserva> reservaList) throws EventoExceprion {
+        Evento nuevoEvento= null;
+        boolean EventoExistente= verificarEventoExistente(id);
+        if (usuarioExiste(id)){
+            throw new EventoExceprion("El Evento con Id: "+id+" ya se encuentra registrado");
+        }else {
+            nuevoEvento.setId(id);
+            nuevoEvento.setNombre(nombre);
+            nuevoEvento.setDescripcion(descripcion);
+            nuevoEvento.setFecha(fecha);
+            nuevoEvento.setCapacidadMaxima(capacidadMaxima);
+            nuevoEvento.setReserva((ArrayList<Reserva>) reservaList);
+        }
+        return nuevoEvento;
     }
 
     @Override
     public Boolean eliminarEvento(String id) throws EventoExceprion {
-        return null;
+        Evento evento= null;
+        boolean existe=false;
+        evento = obtenerEvento(id);
+        if (evento == null){
+            throw new EventoExceprion("El Evento no se encuentra registrado");
+        }else {
+            getEventos().remove(evento);
+            existe=true;
+        }
+        return existe;
     }
 
     @Override
     public boolean actualizarEvento(String id, Evento evento) throws EventoExceprion {
-        return false;
+        Evento eventoactual = obtenerEvento(id);
+        if (eventoactual == null){
+            throw new EventoExceprion("Ese Evento no existe");
+        }else {
+            eventoactual.setId(evento.getId());
+            eventoactual.setNombre(evento.getNombre());
+            eventoactual.setDescripcion(evento.getDescripcion());
+            eventoactual.setFecha(evento.getFecha());
+            eventoactual.setCapacidadMaxima(evento.getCapacidadMaxima());
+            eventoactual.setReserva(evento.getReserva());
+            return true;
+        }
     }
 
     @Override
     public boolean verificarEventoExistente(String id) throws EventoExceprion {
-        return false;
+        if (EventoExiste(id)){
+            throw new EventoExceprion("El Evento con id: " +id+" ya se encuentra registrado");
+        }else {
+            return false;
+        }
     }
 
     @Override
     public Evento obtenerEvento(String id) {
-        return null;
+        Evento EventoEncontrado= null;
+        for (Evento evento: getEventos()){
+            if (evento.getId().equals(id)){
+                EventoEncontrado = evento;
+                break;
+            }
+        }
+        return EventoEncontrado;
     }
 
     @Override

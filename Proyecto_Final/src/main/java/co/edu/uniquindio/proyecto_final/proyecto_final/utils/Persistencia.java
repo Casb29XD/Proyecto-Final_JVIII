@@ -126,7 +126,6 @@ public class Persistencia {
                 evento.setDescripcion(partes[2]);
                 evento.setFecha(partes[3]);
                 evento.setCapacidadMaxima(partes[4]);
-                evento.setCapacidadMaxima(partes[5]);
                 eventos.add(evento);
             }
         }
