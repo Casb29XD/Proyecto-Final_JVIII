@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="243c359d-8a84-4c6d-91b0-d574e53f3f21" name="Changes" comment="repositorio nuevo">
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/controller/ModelFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/controller/ModelFactoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/services/IEventoservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/services/IEventoservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/Sgre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/Sgre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/services/IReservaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/services/IReservaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/utils/Persistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/utils/Persistencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/utils/SgreUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/utils/SgreUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/archivoEmpleados.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/archivoEmpleados.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/log/BancoLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/log/BancoLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/model.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/model.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +130,7 @@
       <workItem from="1713501517116" duration="2210000" />
       <workItem from="1713630939633" duration="1172000" />
       <workItem from="1716077511138" duration="2150000" />
-      <workItem from="1716080128489" duration="15891000" />
+      <workItem from="1716080128489" duration="18862000" />
     </task>
     <task id="LOCAL-00001" summary="map">
       <option name="closed" value="true" />
@@ -257,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716100224474</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716101027859</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716101027859</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,5 +297,16 @@
     <MESSAGE value="cambios" />
     <MESSAGE value="repositorio nuevo" />
     <option name="LAST_COMMIT_MESSAGE" value="repositorio nuevo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/Sgre.java</url>
+          <line>344</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

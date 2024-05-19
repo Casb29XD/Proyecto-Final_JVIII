@@ -41,3 +41,5 @@ may. 18, 2024 10:50:40 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.ut
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-18
 may. 18, 2024 10:51:24 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-18
+may. 19, 2024 1:56:34 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-19

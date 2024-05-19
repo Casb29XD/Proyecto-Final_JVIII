@@ -20,9 +20,9 @@ public class SgreUtils {
         evento.setId("EVT001");
         evento.setNombre("Conferencia de Tecnología");
         evento.setDescripcion("Una conferencia sobre las últimas tendencias en tecnología.");
-        evento.setFecha(new Date(2024 - 1900, 6, 10)); // 10 de julio de 2024
-        evento.setCapacidadMaxima(200);
-        evento.setEmpleado(empleado);
+        evento.setFecha("2024/10/8"); // 10 de julio de 2024
+        evento.setCapacidadMaxima("200");
+        evento.setEmpleado(empleado.getNombre());
         evento.setReserva(new ArrayList<>());
         sgre.getEventos().add(evento);
         evento = new Evento();
@@ -37,9 +37,9 @@ public class SgreUtils {
         evento.setId("EVT002");
         evento.setNombre("Taller de Marketing Digital");
         evento.setDescripcion("Un taller intensivo sobre estrategias de marketing digital.");
-        evento.setFecha(new Date(2024 - 1900, 7, 15)); // 15 de agosto de 2024
-        evento.setCapacidadMaxima(50);
-        evento.setEmpleado(empleado);
+        evento.setFecha("2024/7/15"); // 15 de agosto de 2024
+        evento.setCapacidadMaxima("50");
+        evento.setEmpleado(empleado.getNombre());
         evento.setReserva(new ArrayList<>());
         sgre.getEventos().add(evento);
         evento = new Evento();
@@ -54,9 +54,9 @@ public class SgreUtils {
         evento.setId("EVT005");
         evento.setNombre("Festival de Música");
         evento.setDescripcion("Festival con la participación de bandas locales e internacionales.");
-        evento.setFecha(new Date(2024 - 1900, 10, 30)); // 30 de noviembre de 2024
-        evento.setCapacidadMaxima(500);
-        evento.setEmpleado(empleado);
+        evento.setFecha("2024/10/30"); // 30 de noviembre de 2024
+        evento.setCapacidadMaxima("500");
+        evento.setEmpleado(empleado.getNombre());
         evento.setReserva(new ArrayList<>());
         sgre.getEventos().add(evento);
 
@@ -112,9 +112,9 @@ public class SgreUtils {
 
         Reserva reserva = new Reserva();
         reserva.setId("312470");
-        reserva.setUsuario(usuario);
-        reserva.setEvento(evento);
-        reserva.setFechaSolicitud(new Date(2024-1900,8,10));
+        reserva.setUsuario(usuario.getNombre());
+        reserva.setEvento(evento.getNombre());
+        reserva.setFechaSolicitud("2024-1900/8/10");
 
 
 

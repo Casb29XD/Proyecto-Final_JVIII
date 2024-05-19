@@ -11,5 +11,5 @@ public interface IReservaService {
     boolean actualizarReserva(String id, Reserva reserva) throws ReservaException;
     public boolean  verificarReservaExistente(String id) throws ReservaException;
     public Reserva obtenerReserva(String id);
-    public ArrayList<Reserva> obtenerEvento();
+    public ArrayList<Reserva> obtenerReservas();
 }
