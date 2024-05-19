@@ -2,14 +2,15 @@ package co.edu.uniquindio.proyecto_final.proyecto_final.controller;
 
 import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.*;
 import co.edu.uniquindio.proyecto_final.proyecto_final.exceptions.EmpleadoException;
+import co.edu.uniquindio.proyecto_final.proyecto_final.exceptions.EventoExceprion;
+import co.edu.uniquindio.proyecto_final.proyecto_final.exceptions.ReservaException;
+import co.edu.uniquindio.proyecto_final.proyecto_final.exceptions.UsuarioException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EmpleadoDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EventoDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.ReservaDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.mappers.SgreMapper;
-import co.edu.uniquindio.proyecto_final.proyecto_final.model.Empleado;
-import co.edu.uniquindio.proyecto_final.proyecto_final.model.Sgre;
-import co.edu.uniquindio.proyecto_final.proyecto_final.model.Usuario;
+import co.edu.uniquindio.proyecto_final.proyecto_final.model.*;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.SgreUtils;
@@ -166,12 +167,33 @@ public class ModelFactoryController implements IModelFactoryService,IUsuarioCont
 
     @Override
     public boolean eliminarUsuario(String id) {
-        return false;
+        try {
+            boolean flagExiste = getSgre().eliminarUsuario(id);
+            if (flagExiste) {
+                Persistencia.guardarUsuarios(getSgre().getUsuarios());
+                guardarResourceXML();
+            }
+            return flagExiste;
+        } catch (IOException | UsuarioException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public boolean actualizarUsuario(String id, UsuarioDto usuario) {
-        return false;
+        try {
+            Usuario usuario1 = mapper.usuarioDtoToUsuario(usuario);
+            boolean resultado = getSgre().actualizarUsuario(id, usuario1);
+            if (resultado) {
+                Persistencia.guardarUsuarios(getSgre().getUsuarios());
+                guardarResourceXML();
+            }
+            return resultado;
+        } catch (IOException | UsuarioException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
 //Evento
@@ -182,17 +204,46 @@ public class ModelFactoryController implements IModelFactoryService,IUsuarioCont
 
     @Override
     public boolean agregarEvento(EventoDto evento) {
-        return false;
+        try {
+            Evento evento1 = mapper.eventoDtoToEvento(evento);
+            getSgre().agregarEvento(evento1);
+            Persistencia.guardarEventos(getSgre().getEventos());
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public boolean eliminarEvento(String id) {
-        return false;
+        try {
+            boolean flagExiste = getSgre().eliminarEvento(id);
+            if (flagExiste) {
+                Persistencia.guardarEventos(getSgre().getEventos());
+                guardarResourceXML();
+            }
+            return flagExiste;
+        } catch (IOException | EventoExceprion e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public boolean actualizarEvento(String id, EventoDto evento) {
-        return false;
+        try {
+            Evento evento1 = mapper.eventoDtoToEvento(evento);
+            boolean resultado = getSgre().actualizarEvento(id, evento1);
+            if (resultado) {
+                Persistencia.guardarEventos(getSgre().getEventos());
+                guardarResourceXML();
+            }
+            return resultado;
+        } catch (IOException | EventoExceprion e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 //Reserva
     @Override
@@ -201,18 +252,47 @@ public class ModelFactoryController implements IModelFactoryService,IUsuarioCont
     }
 
     @Override
-    public boolean agregarReserva(ReservaDto reserva) {
-        return false;
+    public boolean agregarReserva(ReservaDto reservaDto) {
+        try {
+            Reserva reserva = mapper.reservaDtoToReserva(reservaDto);
+            getSgre().agregarReserva(reserva);
+            Persistencia.guardarEventos(getSgre().getEventos());
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public boolean eliminarReserva(String id) {
-        return false;
+        try {
+            boolean flagExiste = getSgre().eliminarReserva(id);
+            if (flagExiste) {
+                Persistencia.guardarReservas(getSgre().getReservas());
+                guardarResourceXML();
+            }
+            return flagExiste;
+        } catch (IOException | ReservaException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public boolean actualizarReserva(String id, ReservaDto reserva) {
-        return false;
+        try {
+            Reserva reserva1 = mapper.reservaDtoToReserva(reserva);
+            boolean resultado = getSgre().actualizarReserva(id, reserva1);
+            if (resultado) {
+                Persistencia.guardarReservas(getSgre().getReservas());
+                guardarResourceXML();
+            }
+            return resultado;
+        } catch (IOException | ReservaException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
 
