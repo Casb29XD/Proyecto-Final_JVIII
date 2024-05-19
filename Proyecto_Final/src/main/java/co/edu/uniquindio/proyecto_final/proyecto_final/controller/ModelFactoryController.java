@@ -17,8 +17,6 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.utils.SgreUtils;
 import java.io.IOException;
 import java.util.List;
 
-import static co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia.RUTA_ARCHIVO_EMPLEADOS;
-
 public class ModelFactoryController implements IModelFactoryService,IUsuarioControllerService, IEventoControllerService,IReservaControllerService {
     Sgre sgre;
     SgreMapper mapper = SgreMapper.INSTANCE;

@@ -10,6 +10,8 @@ import java.util.List;
 public class Persistencia {
     public static final String RUTA_ARCHIVO_EMPLEADOS = "src/main/resources/persistencia/archivoEmpleados.txt";
     public static final String RUTA_ARCHIVO_USUARIOS = "/src/main/resources/persistencia/archivoUsuarios.txt";
+    public static final String RUTA_ARCHIVO_EVENTOS = "src/main/resources/persistencia/archivoEventos.txt";
+    public static final String RUTA_ARCHIVO_RESERVACIONES = "/src/main/resources/persistencia/archivoReservas.txt";
     public static final String RUTA_ARCHIVO_LOG = "src/main/resources/persistencia/log/BancoLog.txt";
     public static final String RUTA_ARCHIVO_OBJETOS = "co.edu.uniquindio.programacion3/src/main/resources/persistencia/archivoObjetos.txt";
     public static final String RUTA_ARCHIVO_MODELO_BANCO_BINARIO = "src/main/resources/persistencia/model.dat";
@@ -69,7 +71,7 @@ public class Persistencia {
 
     //crud usuarios
     public static void guardarUsuarios(List<Usuario> listUsuarios) throws IOException {
-        FileWriter fw = new FileWriter(RUTA_ARCHIVO_EMPLEADOS);
+        FileWriter fw = new FileWriter(RUTA_ARCHIVO_USUARIOS);
         BufferedWriter bfw = new BufferedWriter(fw);
         for (Usuario usuario : listUsuarios) {
             bfw.write(usuario.getId() + "@@" + usuario.getNombre() + "@@" + usuario.getCorreo() + "\n");
@@ -80,7 +82,7 @@ public class Persistencia {
 
     public static List<Usuario> cargarUsuarios() throws IOException {
         List<Usuario> usuarios = new ArrayList<>();
-        FileReader fr = new FileReader(RUTA_ARCHIVO_EMPLEADOS);
+        FileReader fr = new FileReader(RUTA_ARCHIVO_USUARIOS);
         BufferedReader bfr = new BufferedReader(fr);
         String linea;
         while ((linea = bfr.readLine()) != null) {
@@ -99,7 +101,7 @@ public class Persistencia {
     }
     //crud Eventos
     public static void guardarEventos(List<Evento> listEventos) throws IOException {
-        FileWriter fw = new FileWriter(RUTA_ARCHIVO_EMPLEADOS);
+        FileWriter fw = new FileWriter(RUTA_ARCHIVO_EVENTOS);
         BufferedWriter bfw = new BufferedWriter(fw);
         for (Evento evento : listEventos) {
             bfw.write(evento.getId() + "@@" + evento.getNombre() + "@@" + evento.getDescripcion()
@@ -112,7 +114,7 @@ public class Persistencia {
 
     public static List<Evento> cargarEvento() throws IOException {
         List<Evento> eventos = new ArrayList<>();
-        FileReader fr = new FileReader(RUTA_ARCHIVO_EMPLEADOS);
+        FileReader fr = new FileReader(RUTA_ARCHIVO_EVENTOS);
         BufferedReader bfr = new BufferedReader(fr);
         String linea;
         while ((linea = bfr.readLine()) != null) {
@@ -134,7 +136,7 @@ public class Persistencia {
     }
     //crud Reservas
     public static void guardarReservas(List<Reserva> listReserva) throws IOException {
-        FileWriter fw = new FileWriter(RUTA_ARCHIVO_EMPLEADOS);
+        FileWriter fw = new FileWriter(RUTA_ARCHIVO_RESERVACIONES);
         BufferedWriter bfw = new BufferedWriter(fw);
         for (Reserva reserva : listReserva) {
             bfw.write(reserva.getId() + "@@" + reserva.getUsuario() +"@@"+ reserva.getEvento()
@@ -146,7 +148,7 @@ public class Persistencia {
 
     public static List<Reserva> cargaReservas() throws IOException {
         List<Reserva> reservas = new ArrayList<>();
-        FileReader fr = new FileReader(RUTA_ARCHIVO_EMPLEADOS);
+        FileReader fr = new FileReader(RUTA_ARCHIVO_RESERVACIONES);
         BufferedReader bfr = new BufferedReader(fr);
         String linea;
         while ((linea = bfr.readLine()) != null) {
