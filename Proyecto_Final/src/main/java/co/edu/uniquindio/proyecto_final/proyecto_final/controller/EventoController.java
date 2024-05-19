@@ -6,23 +6,31 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EventoDto;
 import java.util.List;
 
 public class EventoController implements IEventoControllerService {
+    ModelFactoryController modelFactoryController;
+
+    public EventoController(){
+        modelFactoryController = ModelFactoryController.getInstance();
+    }
+
     @Override
     public List<EventoDto> obtenerEvento() {
-        return null;
+        return modelFactoryController.obtenerEvento();
     }
 
     @Override
     public boolean agregarEvento(EventoDto evento) {
-        return false;
+        return modelFactoryController.agregarEvento(evento);
     }
 
     @Override
-    public boolean eliminarUsuario(String id) {
-        return false;
+    public boolean eliminarEvento(String id) {
+        return modelFactoryController.eliminarEvento(id);
     }
 
     @Override
-    public boolean actualizarUsuario(String id, EventoDto evento) {
-        return false;
+    public boolean actualizarEvento(String id, EventoDto evento) {
+        return modelFactoryController.actualizarEvento(id, evento);
     }
+
+
 }

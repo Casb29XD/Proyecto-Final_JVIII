@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Reserva {
     String id;
-    Usuario usuario;
-    Evento evento;
-    Date fechaSolicitud;
+    String usuario;
+    String evento;
+    String fechaSolicitud;
     String estado;
 
     public String getId() {
@@ -17,27 +17,27 @@ public class Reserva {
         this.id = id;
     }
 
-    public Usuario getUsuario() {
+    public String getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
 
-    public Evento getEvento() {
+    public String getEvento() {
         return evento;
     }
 
-    public void setEvento(Evento evento) {
+    public void setEvento(String evento) {
         this.evento = evento;
     }
 
-    public Date getFechaSolicitud() {
+    public String getFechaSolicitud() {
         return fechaSolicitud;
     }
 
-    public void setFechaSolicitud(Date fechaSolicitud) {
+    public void setFechaSolicitud(String fechaSolicitud) {
         this.fechaSolicitud = fechaSolicitud;
     }
 

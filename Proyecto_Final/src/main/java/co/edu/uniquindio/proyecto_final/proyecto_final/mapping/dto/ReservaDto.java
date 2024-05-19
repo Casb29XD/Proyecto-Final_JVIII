@@ -7,8 +7,8 @@ import java.util.Date;
 
 public record ReservaDto(
         String id,
-    Usuario usuario,
-    Evento evento,
-    Date fechaSolicitud,
+    String usuario,
+    String evento,
+    String fechaSolicitud,
     String estado
 ) {}

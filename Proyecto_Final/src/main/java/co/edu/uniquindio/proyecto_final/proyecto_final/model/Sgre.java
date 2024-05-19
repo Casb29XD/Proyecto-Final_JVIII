@@ -3,11 +3,13 @@ package co.edu.uniquindio.proyecto_final.proyecto_final.model;
 import co.edu.uniquindio.proyecto_final.proyecto_final.exceptions.EmpleadoException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.exceptions.UsuarioException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.services.IEmpleadoService;
+import co.edu.uniquindio.proyecto_final.proyecto_final.model.services.IUsuarioService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sgre implements IEmpleadoService {
+public class Sgre implements IEmpleadoService, IUsuarioService {
+
     private static final long serialVersionUID = 1L;
     List<Usuario> usuarios = new ArrayList<>();
     List<Empleado> empleados = new ArrayList<>();
@@ -45,6 +47,8 @@ public class Sgre implements IEmpleadoService {
         this.reservas = reservas;
     }
 
+
+    //empleados
     @Override
     public Empleado crearEmpleado(String id, String nombre, String correo, ArrayList<Reserva> reserva) throws EmpleadoException {
         Empleado nuevoEmpleado= null;
@@ -101,7 +105,6 @@ public class Sgre implements IEmpleadoService {
         }
     }
 
-
     private boolean empleadoExiste(String id) {
         boolean empleadoEncontrado=false;
         for (Empleado empleado: getEmpleados()){
@@ -123,9 +126,44 @@ public class Sgre implements IEmpleadoService {
         }
         return empleadoEncontrado;
     }
-
     @Override
     public ArrayList<Empleado> obtenerEmpleados() {
         return null;
     }
+
+    //usuarios
+    public void agregarUsuario(Usuario usuario){
+        getUsuarios().add(usuario);
+    }
+
+    @Override
+    public Usuario crearUsuario(String id, String nombre, String correo, ArrayList<Reserva> reserva) throws UsuarioException {
+        return null;
+    }
+
+    @Override
+    public boolean eliminarUsuario(String id) throws UsuarioException {
+        return false;
+    }
+
+    @Override
+    public boolean actualizarUsuario(String id, Usuario usuario) throws UsuarioException {
+        return false;
+    }
+
+    @Override
+    public boolean verificarUsuario(String id) throws UsuarioException {
+        return false;
+    }
+
+    @Override
+    public Usuario obtenerUsuario(String id) throws UsuarioException {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Usuario> obtenerUsuarios() {
+        return null;
+    }
+
 }

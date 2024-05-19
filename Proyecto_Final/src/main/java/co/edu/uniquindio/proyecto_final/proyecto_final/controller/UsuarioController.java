@@ -6,23 +6,29 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.UsuarioDto;
 import java.util.List;
 
 public class UsuarioController implements IUsuarioControllerService {
+    ModelFactoryController modelFactoryController;
+
+    public UsuarioController(){
+        modelFactoryController = ModelFactoryController.getInstance();
+    }
+
     @Override
     public List<UsuarioDto> obtenerUsuarios() {
-        return null;
+        return modelFactoryController.obtenerUsuarios();
     }
 
     @Override
     public boolean agregarUsuario(UsuarioDto usuario) {
-        return false;
+        return modelFactoryController.agregarUsuario(usuario);
     }
 
     @Override
     public boolean eliminarUsuario(String id) {
-        return false;
+        return modelFactoryController.eliminarUsuario(id);
     }
 
     @Override
     public boolean actualizarUsuario(String id, UsuarioDto usuario) {
-        return false;
+        return modelFactoryController.actualizarUsuario(id, usuario);
     }
 }

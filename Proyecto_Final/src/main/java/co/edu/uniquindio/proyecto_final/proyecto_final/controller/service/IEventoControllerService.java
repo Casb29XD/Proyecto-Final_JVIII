@@ -7,6 +7,6 @@ import java.util.List;
 public interface IEventoControllerService {
     List<EventoDto> obtenerEvento();
     boolean agregarEvento(EventoDto evento);
-    boolean eliminarUsuario(String id);
-    boolean actualizarUsuario(String id, EventoDto evento);
+    boolean eliminarEvento(String id);
+    boolean actualizarEvento(String id, EventoDto evento);
 }

@@ -7,9 +7,9 @@ public class Evento {
     String id;
     String nombre;
     String descripcion;
-    Date fecha;
-    int capacidadMaxima;
-    Empleado empleado;
+    String fecha;
+    String capacidadMaxima;
+    String empleado;
     ArrayList<Reserva> reserva;
 
     public String getId() {
@@ -36,27 +36,27 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
-    public int getCapacidadMaxima() {
+    public String getCapacidadMaxima() {
         return capacidadMaxima;
     }
 
-    public void setCapacidadMaxima(int capacidadMaxima) {
+    public void setCapacidadMaxima(String capacidadMaxima) {
         this.capacidadMaxima = capacidadMaxima;
     }
 
-    public Empleado getEmpleado() {
+    public String getEmpleado() {
         return empleado;
     }
 
-    public void setEmpleado(Empleado empleado) {
+    public void setEmpleado(String empleado) {
         this.empleado = empleado;
     }
 

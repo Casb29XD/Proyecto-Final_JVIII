@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IReservaControllerService {
     List<ReservaDto> obtenerReserva();
-    boolean agregarEvento(ReservaDto reserva);
-    boolean eliminarUsuario(String id);
-    boolean actualizarUsuario(String id, ReservaDto reserva);
+    boolean agregarReserva(ReservaDto reserva);
+    boolean eliminarReserva(String id);
+    boolean actualizarReserva(String id, ReservaDto reserva);
 }

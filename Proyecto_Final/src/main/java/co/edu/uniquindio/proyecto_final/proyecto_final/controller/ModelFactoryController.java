@@ -1,15 +1,15 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.controller;
 
-import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.IEmpleadoControllerService;
-import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.IModelFactoryService;
-import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.IReservaControllerService;
-import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.IUsuarioControllerService;
+import co.edu.uniquindio.proyecto_final.proyecto_final.controller.service.*;
 import co.edu.uniquindio.proyecto_final.proyecto_final.exceptions.EmpleadoException;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EmpleadoDto;
+import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EventoDto;
+import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.ReservaDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.mappers.SgreMapper;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.Empleado;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.Sgre;
+import co.edu.uniquindio.proyecto_final.proyecto_final.model.Usuario;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.SgreUtils;
@@ -19,7 +19,7 @@ import java.util.List;
 
 import static co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia.RUTA_ARCHIVO_EMPLEADOS;
 
-public class ModelFactoryController implements IModelFactoryService, IUsuarioControllerService {
+public class ModelFactoryController implements IModelFactoryService,IUsuarioControllerService, IEventoControllerService,IReservaControllerService {
     Sgre sgre;
     SgreMapper mapper = SgreMapper.INSTANCE;
 
@@ -150,12 +150,20 @@ public class ModelFactoryController implements IModelFactoryService, IUsuarioCon
 //usuario
     @Override
     public List<UsuarioDto> obtenerUsuarios() {
-        return List.of();
+        return mapper.getUsuariosDto(sgre.getUsuarios());
     }
 
     @Override
-    public boolean agregarUsuario(UsuarioDto usuario) {
-        return false;
+    public boolean agregarUsuario(UsuarioDto usuarioDto) {
+        try {
+            Usuario usuario = mapper.usuarioDtoToUsuario(usuarioDto);
+            getSgre().agregarUsuario(usuario);
+            Persistencia.guardarUsuarios(getSgre().getUsuarios());
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
@@ -169,6 +177,45 @@ public class ModelFactoryController implements IModelFactoryService, IUsuarioCon
     }
 
 //Evento
+    @Override
+    public List<EventoDto> obtenerEvento() {
+        return mapper.getEventoDto(sgre.getEventos());
+    }
+
+    @Override
+    public boolean agregarEvento(EventoDto evento) {
+        return false;
+    }
+
+    @Override
+    public boolean eliminarEvento(String id) {
+        return false;
+    }
+
+    @Override
+    public boolean actualizarEvento(String id, EventoDto evento) {
+        return false;
+    }
+//Reserva
+    @Override
+    public List<ReservaDto> obtenerReserva() {
+        return mapper.getReservaDto(sgre.getReservas());
+    }
+
+    @Override
+    public boolean agregarReserva(ReservaDto reserva) {
+        return false;
+    }
+
+    @Override
+    public boolean eliminarReserva(String id) {
+        return false;
+    }
+
+    @Override
+    public boolean actualizarReserva(String id, ReservaDto reserva) {
+        return false;
+    }
 
 
     private void cargarResourceXML() {

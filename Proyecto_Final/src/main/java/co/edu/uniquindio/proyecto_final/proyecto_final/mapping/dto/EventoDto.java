@@ -9,8 +9,8 @@ import java.util.List;
 public record EventoDto(String id,
     String nombre,
     String descripcion,
-    Date fecha,
-    int capacidadMaxima,
-    Empleado empleado,
+    String fecha,
+    String capacidadMaxima,
+    String empleado,
     List<Reserva> reservaList
 ) {}
